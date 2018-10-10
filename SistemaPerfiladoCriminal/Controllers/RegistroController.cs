@@ -6,12 +6,11 @@ using System.Web.Mvc;
 
 namespace SistemaPerfiladoCriminal.Controllers
 {
-    public class HomeController : Controller
+    public class RegistroController : Controller
     {
+        // GET: Registro
         public ActionResult Index()
         {
-            ViewBag.Title = "Perfilado Criminal";
-
             return View();
         }
     }

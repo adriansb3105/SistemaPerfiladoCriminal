@@ -1,0 +1,94 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Agregar datos</h2>
+
+<form>
+    <div class="form-group row">
+        <br />
+        <label for="caso" class="col-sm-2 col-form-label">Nombre del caso</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="caso" placeholder="Nombre del caso">
+        </div>
+    </div>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#victima" role="tab" aria-controls="home" aria-selected="true">Víctima</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Escenario</a>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="victima" role="tabpanel" aria-labelledby="home-tab">
+            <br />
+            <div class="form-group row">
+                <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="foto" class="col-sm-2 col-form-label">Fotografía</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="foto" placeholder="Fotografía">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="causa" class="col-sm-2 col-form-label">Causa</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="causa" placeholder="Causa">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="sexo" class="col-sm-2 col-form-label">Sexo</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="sexo" placeholder="Sexo">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="cedula" class="col-sm-2 col-form-label">Cédula</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="cedula" placeholder="Cédula">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="nacimiento" class="col-sm-2 col-form-label">Fecha de nacimiento</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nacimiento" placeholder="Fecha de nacimiento">
+                </div>
+            </div>
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+        </div>
+
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-info">Guardar cambios</button>
+</form>

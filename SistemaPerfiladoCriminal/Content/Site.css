@@ -15,3 +15,20 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.center {
+    text-align: center;
+}
+
+.top-margin {
+    margin-top: 5em;
+}
+
+.left-margin {
+    margin-left: 5em;
+}
+
+.center-input {
+    margin-right: auto;
+    margin-left: auto;
+}
