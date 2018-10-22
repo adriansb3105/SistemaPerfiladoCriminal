@@ -189,6 +189,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Context\Contexto.cs" />
     <Compile Include="Controllers\AdministradorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IngresarController.cs" />
@@ -197,7 +198,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Autor.cs" />
+    <Compile Include="Models\Entrevista.cs" />
+    <Compile Include="Models\Escenario.cs" />
+    <Compile Include="Models\HermanoVictima.cs" />
+    <Compile Include="Models\HijoVictima.cs" />
+    <Compile Include="Models\Indicio.cs" />
+    <Compile Include="Models\MadreVictima.cs" />
+    <Compile Include="Models\MatrimonioVictima.cs" />
+    <Compile Include="Models\PadreVictima.cs" />
+    <Compile Include="Models\ParejaSentimentalVictima.cs" />
+    <Compile Include="Models\Reconstruccion.cs" />
+    <Compile Include="Models\Victima.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AutorRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -258,7 +273,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -288,12 +302,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SistemaPerfiladoCriminalLibrary\SistemaPerfiladoCriminalLibrary.csproj">
-      <Project>{7cf150fe-94dc-4fab-a895-aa8161cfa99f}</Project>
-      <Name>SistemaPerfiladoCriminalLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
