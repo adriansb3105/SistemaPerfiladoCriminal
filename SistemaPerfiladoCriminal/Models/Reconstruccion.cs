@@ -11,7 +11,7 @@ namespace SistemaPerfiladoCriminal.Models
     {
         [Key]
         public int LintId { get; set; }
-        public int LstrId;
-        public ICollection<String> LcolDetalles;
+        public int LstrId { get; set; }
+        public ICollection<Detalle> LcolDetalles;
     }
 }

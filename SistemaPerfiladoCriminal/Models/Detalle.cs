@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
 namespace SistemaPerfiladoCriminal.Models
 {
-    public class Autor
+    public class Detalle
     {
         [Key]
-        public int LstrId { get; set; }
-        public ICollection<Detalle> LcolDetalles { get; set; }
+        public int LintId { get; set; }
+        public String LstrDetalle { get; set; }
     }
 }
