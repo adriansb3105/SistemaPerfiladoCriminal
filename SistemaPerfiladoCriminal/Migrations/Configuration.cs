@@ -9,7 +9,7 @@ namespace SistemaPerfiladoCriminal.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(SistemaPerfiladoCriminal.Context.Contexto context)
@@ -18,6 +18,14 @@ namespace SistemaPerfiladoCriminal.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+
+            /*context.Comentarios.AddOrUpdate(x => x.Id, new Comentario()
+            {
+                Id = 1,
+                Autor = "Pablo",
+                BlogPostId = 1,
+                Contenido = "Ejemplo de contenido"
+            });*/
         }
     }
 }

@@ -7,21 +7,21 @@ using SistemaPerfiladoCriminal.Context;
 
 namespace SistemaPerfiladoCriminal.Services
 {
-    public class AutorRepository
+    public class EscenarioRepository
     {
-        public List<Autor> ObtenerTodos()
+        public List<Escenario> ObtenerTodos()
         {
             using (var db = new Contexto())
             {
-                return db.Autores.ToList();
+                return db.Escenarios.ToList();
             }
         }
 
-        internal void Crear(Autor model)
+        internal void Crear(Escenario model)
         {
             using (var db = new Contexto())
             {
-                db.Autores.Add(model);
+                db.Escenarios.Add(model);
                 db.SaveChanges();
             }
         }

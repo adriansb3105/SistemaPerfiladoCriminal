@@ -7,21 +7,21 @@ using SistemaPerfiladoCriminal.Context;
 
 namespace SistemaPerfiladoCriminal.Services
 {
-    public class AutorRepository
+    public class VictimaRepository
     {
-        public List<Autor> ObtenerTodos()
+        public List<Victima> ObtenerTodos()
         {
             using (var db = new Contexto())
             {
-                return db.Autores.ToList();
+                return db.Victimas.ToList();
             }
         }
 
-        internal void Crear(Autor model)
+        internal void Crear(Victima model)
         {
             using (var db = new Contexto())
             {
-                db.Autores.Add(model);
+                db.Victimas.Add(model);
                 db.SaveChanges();
             }
         }
