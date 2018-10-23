@@ -51,6 +51,8 @@ D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\rosly
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\roslyn\VBCSCompiler.exe
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\roslyn\VBCSCompiler.exe.config
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\Antlr3.Runtime.dll
+D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\EntityFramework.dll
+D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\EntityFramework.SqlServer.dll
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\Microsoft.AI.Agent.Intercept.dll
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\Microsoft.AI.DependencyCollector.dll
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -74,6 +76,8 @@ D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\Syste
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\System.Web.WebPages.dll
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\System.Web.WebPages.Razor.dll
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\WebGrease.dll
+D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\EntityFramework.xml
+D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\EntityFramework.SqlServer.xml
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\Newtonsoft.Json.xml
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\System.Net.Http.Formatting.xml
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\System.Web.Helpers.xml
@@ -92,12 +96,7 @@ D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\Micro
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\Microsoft.AI.WindowsServer.xml
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\Microsoft.AI.Web.xml
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\obj\Debug\SistemaPerfiladoCriminal.csprojAssemblyReference.cache
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\obj\Debug\SistemaPerfiladoCriminal.csproj.CoreCompileInputs.cache
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\obj\Debug\SistemaPerfiladoCriminal.csproj.CopyComplete
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\obj\Debug\SistemaPerfiladoCriminal.dll
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\obj\Debug\SistemaPerfiladoCriminal.pdb
-D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\EntityFramework.dll
-D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\EntityFramework.SqlServer.dll
-D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\EntityFramework.xml
-D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\bin\EntityFramework.SqlServer.xml

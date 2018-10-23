@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
 namespace SistemaPerfiladoCriminal.Models
 {
-    [Table("Reconstrucciones")]
-    public class Reconstruccion
+    [Table("DetallesAutor")]
+    public class DetalleAutor
     {
         [Key]
         public int LintId { get; set; }
-        public ICollection<DetalleReconstruccion> LcolDetallesReconstruccion;
+        public String LstrDetalle { get; set; }
     }
 }

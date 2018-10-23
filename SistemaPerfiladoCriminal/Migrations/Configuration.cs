@@ -9,7 +9,8 @@ namespace SistemaPerfiladoCriminal.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(SistemaPerfiladoCriminal.Context.Contexto context)

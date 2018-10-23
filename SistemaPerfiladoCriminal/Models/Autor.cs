@@ -13,6 +13,6 @@ namespace SistemaPerfiladoCriminal.Models
     {
         [Key]
         public int LstrId { get; set; }
-        public ICollection<Detalle> LcolDetalles { get; set; }
+        public ICollection<DetalleAutor> LcolDetallesAutor { get; set; }
     }
 }
