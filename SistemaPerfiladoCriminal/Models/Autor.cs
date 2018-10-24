@@ -12,7 +12,8 @@ namespace SistemaPerfiladoCriminal.Models
     public class Autor
     {
         [Key]
-        public int LstrId { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int LintId { get; set; }
         public ICollection<DetalleAutor> LcolDetallesAutor { get; set; }
     }
 }

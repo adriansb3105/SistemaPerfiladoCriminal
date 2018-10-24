@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,8 @@ namespace SistemaPerfiladoCriminal.Models
     public class Victima
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int LintId { get; set; }
-        public int LstrId { get; set; }
         public String LstrFotoURL { get; set; }
         public String LstrNombre { get; set; }
         public String LstrCausa { get; set; }
@@ -57,6 +58,6 @@ namespace SistemaPerfiladoCriminal.Models
         public ParejaSentimentalVictima LpsvParejaSentimentalVictima { get; set; }
         public ICollection<HermanoVictima> LcolHermanos { get; set; }
         public ICollection<HijoVictima> LcolHijos { get; set; }
-        public ICollection<Entrevista> LcolEntrevistas { get; set; }
+        public ICollection<EntrevistaVictima> LcolEntrevistas { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,8 @@ namespace SistemaPerfiladoCriminal.Models
     public class Escenario
     {
         [Key]
-        public int LstrId { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int LintId { get; set; }
         public String LstrDiaHallazgo { get; set; }
         public DateTime LstrFechaHallazgo { get; set; }
         public String LstrHoraHallazgo { get; set; }
@@ -28,6 +30,6 @@ namespace SistemaPerfiladoCriminal.Models
         public String LstrCustodiaSitioSuceso { get; set; }
         public DateTime LdtiHoraLevantamientoCuerpo { get; set; }
         public ICollection<Indicio> LcolIndicios { get; set; }
-        public ICollection<Entrevista> LcolEntrevistas { get; set; }
+        public ICollection<EntrevistaEscenario> LcolEntrevistas { get; set; }
     }
 }

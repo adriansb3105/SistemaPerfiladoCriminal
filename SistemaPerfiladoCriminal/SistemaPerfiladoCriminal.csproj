@@ -200,9 +200,10 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Autor.cs" />
-    <Compile Include="Models\DetalleAutor.cs" />
     <Compile Include="Models\DetalleReconstruccion.cs" />
-    <Compile Include="Models\Entrevista.cs" />
+    <Compile Include="Models\DetalleAutor.cs" />
+    <Compile Include="Models\EntrevistaEscenario.cs" />
+    <Compile Include="Models\EntrevistaVictima.cs" />
     <Compile Include="Models\Escenario.cs" />
     <Compile Include="Models\HermanoVictima.cs" />
     <Compile Include="Models\HijoVictima.cs" />

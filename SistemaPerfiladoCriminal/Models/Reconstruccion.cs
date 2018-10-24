@@ -12,7 +12,8 @@ namespace SistemaPerfiladoCriminal.Models
     public class Reconstruccion
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int LintId { get; set; }
-        public ICollection<DetalleReconstruccion> LcolDetallesReconstruccion;
+        public ICollection<DetalleReconstruccion> LcolDetallesReconstruccion { get; set; }
     }
 }

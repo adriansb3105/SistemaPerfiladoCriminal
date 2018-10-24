@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
+
 
 namespace SistemaPerfiladoCriminal.Models
 {
@@ -11,6 +13,7 @@ namespace SistemaPerfiladoCriminal.Models
     public class DetalleAutor
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int LintId { get; set; }
         public String LstrDetalle { get; set; }
     }
