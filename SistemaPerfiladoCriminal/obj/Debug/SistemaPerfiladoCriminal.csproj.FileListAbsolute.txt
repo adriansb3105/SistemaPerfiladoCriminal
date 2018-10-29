@@ -100,3 +100,4 @@ D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\obj\Debug
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\obj\Debug\SistemaPerfiladoCriminal.csproj.CopyComplete
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\obj\Debug\SistemaPerfiladoCriminal.dll
 D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\obj\Debug\SistemaPerfiladoCriminal.pdb
+D:\Analisis\Proyecto\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\obj\Debug\SistemaPerfiladoCriminal.csprojAssemblyReference.cache

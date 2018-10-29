@@ -131,7 +131,7 @@ namespace SistemaPerfiladoCriminal.Migrations
                 LstrAutopsia = "Antropofagia",
                 LstrDictamenToxicologico = "Positivo en cocaina",
                 LstrLaboratorio = "Ropas elementos botanicos",
-                LstrFuidosBiologicos = "",
+                LstrFluidosBiologicos = "",
                 LstrManeraMuerte = "Indeterminada",
                 LstrCausaMuerte = "N/A",
                 LstrLesionesEncontradasAutopsia = "n/a",

@@ -47,7 +47,7 @@ namespace SistemaPerfiladoCriminal.Models
         public String LstrAutopsia { get; set; }
         public String LstrDictamenToxicologico { get; set; }
         public String LstrLaboratorio { get; set; }
-        public String LstrFuidosBiologicos { get; set; }
+        public String LstrFluidosBiologicos { get; set; }
         public String LstrManeraMuerte { get; set; }
         public String LstrCausaMuerte { get; set; }
         public String LstrLesionesEncontradasAutopsia { get; set; }
