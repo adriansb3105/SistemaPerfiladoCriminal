@@ -1,4 +1,5 @@
-﻿hideShowDivs(1, "block");
+﻿/*
+hideShowDivs(1, "block");
 hideShowDivs(2, "none");
 hideShowDivs(3, "none");
 hideShowDivs(4, "none");
@@ -34,3 +35,4 @@ document.querySelector("#victima-page-4-li").addEventListener("click", () => {
 function hideShowDivs(id, action) {
     document.querySelector("#victima-" + id).style.display = action;
 }
+*/

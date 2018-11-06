@@ -14,6 +14,14 @@ namespace SistemaPerfiladoCriminal.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int LintId { get; set; }
-        public ICollection<DetalleAutor> LcolDetallesAutor { get; set; }
+        public String LstrNombre { get; set; }
+        public List<DetallesAutor> LcolDetalles { get; set; }
+        public Caso caso;
+
+        public Autor()
+        {
+            this.LcolDetalles = new List<DetallesAutor>();
+            this.caso = new Caso();
+        }
     }
 }

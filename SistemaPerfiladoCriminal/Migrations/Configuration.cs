@@ -17,96 +17,72 @@ namespace SistemaPerfiladoCriminal.Migrations
         {
             //  This method will be called after migrating to the latest version. //You can use the DbSet<T>.AddOrUpdate() helper extension method //to avoid creating duplicate seed data.
 
+            context.Casos.AddOrUpdate(x => x.LintId, crearCaso(context));
             //context.Autores.AddOrUpdate(x => x.LintId, crearAutor(context));
             //context.Reconstrucciones.AddOrUpdate(x => x.LintId, crearReconstruccion(context));
             //context.Escenarios.AddOrUpdate(x => x.LintId, crearEscenario(context));
             //context.Victimas.AddOrUpdate(x => x.LintId, crearVictima(context));
         }
 
+        public Caso crearCaso(SistemaPerfiladoCriminal.Context.Contexto context)
+        {
+            List<Victima> victimas = new List<Victima>();
+            victimas.Add(crearVictima(context));
+
+            List<Escenario> escenarios = new List<Escenario>();
+            escenarios.Add(crearEscenario(context));
+
+            List<Reconstruccion> reconstrucciones = new List<Reconstruccion>();
+            reconstrucciones.Add(crearReconstruccion(context));
+
+            List<Autor> autores = new List<Autor>();
+            autores.Add(crearAutor(context));
+
+
+            return new Caso()
+            {
+                LstrNombre = "Caso 2",
+                LcolVictimas = victimas,
+                LcolEscenarios = escenarios,
+                LcolReconstrucciones = reconstrucciones,
+                LcolAutores = autores
+            };
+        }
+
         public Victima crearVictima(SistemaPerfiladoCriminal.Context.Contexto context)
         {
-            Indicio indicio1 = new Indicio();
-            indicio1.LstrDescripcion = "Indicio 1";            
+            Indicio indicio1 = new Indicio("Indicio 2");
             List<Indicio> indicios = new List<Indicio>();
             indicios.Add(indicio1);
 
-            MadreVictima madreVictima = new MadreVictima();
-            madreVictima.LstrNombre = "Madre 1";
-            madreVictima.LstrTelefono = "Telelefono madre 1";
+            Persona madreVictima = new MadreVictima("Telelefono madre 2", "Madre 2");
 
-            PadreVictima padreVictima = new PadreVictima();
-            padreVictima.LstrNombre = "Padre 1";
-            padreVictima.LstrTelefono = "Telefono padre 1";
+            Persona padreVictima = new PadreVictima("Telefono padre 2", "Padre 2");
 
-            MatrimonioVictima matrimonioVictima = new MatrimonioVictima();
-            matrimonioVictima.LstrNombre = "Matrimonio nombre";
-            matrimonioVictima.LstrCedula = "Matrimonio Cedula";
-            matrimonioVictima.LstrNacionalidad = "Matrimonio Nacionalidad";
-            matrimonioVictima.LstrFecha = new DateTime(2005, 04, 10, 16, 25, 00);
+            Persona matrimonioVictima = new MatrimonioVictima("Matrimonio Cedula 2", "Matrimonio Nacionalidad 2", new DateTime(2005, 04, 10, 16, 25, 00), "Matrimonio nombre 2");
 
-            ParejaSentimentalVictima parejaSentimentalVictima = new ParejaSentimentalVictima();
-            parejaSentimentalVictima.LstrNombre = "Pareja sentimental nombre";
-            parejaSentimentalVictima.LstrCedula = "Pareja sentimental cedula";
-            parejaSentimentalVictima.LstrAlias = "Pareja sentimental alias";
-            parejaSentimentalVictima.LstrTelefono = "Pareja sentimental telefono";
+            Persona parejaSentimentalVictima = new ParejaSentimentalVictima("Pareja sentimental cedula 2", "Pareja sentimental alias 2", "Pareja sentimental telefono 2", "Pareja sentimental nombre 2");
 
+            Persona hermanoVictima1 = new HermanoVictima("telefono hermano 2", "Hermano 2");
 
+            Persona hijo1 = new HijoVictima("hijo 2 cedula", "hijo 2 nacionalidad", 23, "hijo 2 telefono", "hijo 2 nombre");
 
-            HermanoVictima hermanoVictima1 = new HermanoVictima();
-            hermanoVictima1.LstrNombre = "Hermano 1";
-            hermanoVictima1.LstrTelefono = "telefono hermano 1";
+            EntrevistaVictima entrevista1 = new EntrevistaVictima("entrevista 3 nombre", "entrevista 3 descripcion");
 
-            HermanoVictima hermanoVictima2 = new HermanoVictima();
-            hermanoVictima2.LstrNombre = "Hermano 2";
-            hermanoVictima2.LstrTelefono = "telefono hermano 2";
-
-            List<HermanoVictima> hermanos = new List<HermanoVictima>();
-            hermanos.Add(hermanoVictima1);
-            hermanos.Add(hermanoVictima2);
-
-
-
-            HijoVictima hijo1 = new HijoVictima();
-            hijo1.LstrNombre = "hijo 1 nombre";
-            hijo1.LstrCedula = "hijo 1 cedula";
-            hijo1.LstrNacionalidad = "hijo 1 nacionalidad";
-            hijo1.LintEdad = 23;
-            hijo1.LstrTelefono = "hijo 1 telefono";
-
-            HijoVictima hijo2 = new HijoVictima();
-            hijo2.LstrNombre = "hijo 2 nombre";
-            hijo2.LstrCedula = "hijo 2 cedula";
-            hijo2.LstrNacionalidad = "hijo 2 nacionalidad";
-            hijo2.LintEdad = 31;
-            hijo2.LstrTelefono = "hijo 2 telefono";
-
-            List<HijoVictima> hijos = new List<HijoVictima>();
-            hijos.Add(hijo1);
-            hijos.Add(hijo2);
-
-
-
-            EntrevistaVictima entrevista1 = new EntrevistaVictima();
-            entrevista1.LstrNombre = "entrevista 1 nombre";
-            entrevista1.LstrDescripcion = "entrevista 1 descripcion";
-
-            EntrevistaVictima entrevista2 = new EntrevistaVictima();
-            entrevista2.LstrNombre = "entrevista 2 nombre";
-            entrevista2.LstrDescripcion = "entrevista 2 descripcion";
+            EntrevistaVictima entrevista2 = new EntrevistaVictima("entrevista 4 nombre", "entrevista 4 descripcion");
 
             List<EntrevistaVictima> entrevistas = new List<EntrevistaVictima>();
             entrevistas.Add(entrevista1);
             entrevistas.Add(entrevista2);
-
-
+            
             return new Victima()
             {
                 LstrFotoURL = "http://www.noverbal.es/uploads/blog/criminal.jpg",
-                LstrNombre = "Victima 1",
-                LstrCausa = "Causa 1",
-                LstrAlias = "Alias 1",
+                LstrNombre = "Victima 2",
+                LstrCausa = "Causa 2",
+                LstrAlias = "Alias 2",
                 LstrSexo = "Femenino",
-                LstrCedula = "11111111",
+                LstrCedula = "222222222222",
                 LstrNacionalidad = "costarricense",
                 LstrTez = "Blanca",
                 LstrCabello = "Cafe",
@@ -144,36 +120,29 @@ namespace SistemaPerfiladoCriminal.Migrations
                 LpvPadreVictima = padreVictima,
                 LmvMatrimonioVictima = matrimonioVictima,
                 LpsvParejaSentimentalVictima = parejaSentimentalVictima,
-                LcolHermanos = hermanos,
-                LcolHijos = hijos,
+                LcolHermanos = hermanoVictima1,
+                LcolHijos = hijo1,
                 LcolEntrevistas = entrevistas
             };
         }
 
         public Escenario crearEscenario(SistemaPerfiladoCriminal.Context.Contexto context)
         {
-            Indicio indicio1 = new Indicio();
-            indicio1.LstrDescripcion = "Indicio 1";
-            Indicio indicio2 = new Indicio();
-            indicio2.LstrDescripcion = "Indicio 2";
+            Indicio indicio1 = new Indicio("Indicio 3");
+            Indicio indicio2 = new Indicio("Indicio 4");
 
             List<Indicio> indicios = new List<Indicio>();
             indicios.Add(indicio1);
             indicios.Add(indicio2);
 
-            EntrevistaEscenario entrevista1 = new EntrevistaEscenario();
-            entrevista1.LstrNombre = "Nombre 1";
-            entrevista1.LstrDescripcion = "No sabe que sucedio 1";
-            EntrevistaEscenario entrevista2 = new EntrevistaEscenario();
-            entrevista2.LstrNombre = "Nombre 2";
-            entrevista2.LstrDescripcion = "No sabe que sucedio 2";
+            EntrevistaEscenario entrevista1 = new EntrevistaEscenario("Nombre 3", "No sabe que sucedio 3");
+            EntrevistaEscenario entrevista2 = new EntrevistaEscenario("Nombre 4", "No sabe que sucedio 4");
 
             List<EntrevistaEscenario> entrevistas = new List<EntrevistaEscenario>();
             entrevistas.Add(entrevista1);
             entrevistas.Add(entrevista2);
-
-
-            return new Escenario() {
+            
+            return new Escenario("Escenario 2") {
                 LstrDiaHallazgo = "Viernes",
                 LstrHoraHallazgo = "13:26 horas segun central de radio",
                 LstrUbicacion = "Hatillo Centro, del restaurante",
@@ -197,30 +166,31 @@ namespace SistemaPerfiladoCriminal.Migrations
 
         public Reconstruccion crearReconstruccion(SistemaPerfiladoCriminal.Context.Contexto context)
         {
-            DetalleReconstruccion detalleReconstruccion1 = new DetalleReconstruccion();
-            detalleReconstruccion1.LstrDetalle = "Detalle Reconstruccion 1";
-            DetalleReconstruccion detalleReconstruccion2 = new DetalleReconstruccion();
-            detalleReconstruccion2.LstrDetalle = "Detalle Reconstruccion 2";
+            CaracteristicasReconstruccion cr1 = new CaracteristicasReconstruccion("Detalle Reconstruccion 3");
+            CaracteristicasReconstruccion cr2 = new CaracteristicasReconstruccion("Detalle Reconstruccion 4");
 
-            List<DetalleReconstruccion> detallesReconstruccion = new List<DetalleReconstruccion>();
-            detallesReconstruccion.Add(detalleReconstruccion1);
-            detallesReconstruccion.Add(detalleReconstruccion2);
 
-            return new Reconstruccion() { LcolDetallesReconstruccion = detallesReconstruccion };
+            List<CaracteristicasReconstruccion> caractReconstruccion = new List<CaracteristicasReconstruccion>();
+            caractReconstruccion.Add(cr1);
+            caractReconstruccion.Add(cr2);
+
+            Reconstruccion reconstruccion1 = new Reconstruccion() { LcolCaracteristicas = caractReconstruccion };
+            reconstruccion1.LstrNombre = "Reconstruccion 2";
+            return reconstruccion1;
         }
 
         public Autor crearAutor(SistemaPerfiladoCriminal.Context.Contexto context)
         {
-            DetalleAutor detalleAutor1 = new DetalleAutor();
-            detalleAutor1.LstrDetalle = "Detalle autor 1";
-            DetalleAutor detalleAutor2 = new DetalleAutor();
-            detalleAutor2.LstrDetalle = "Detalle autor 2";
+            DetallesAutor da1 = new DetallesAutor("Detalle autor 3");
+            DetallesAutor da2 = new DetallesAutor("Detalle autor 4");
 
-            List<DetalleAutor> detallesAutor = new List<DetalleAutor>();
-            detallesAutor.Add(detalleAutor1);
-            detallesAutor.Add(detalleAutor2);
+            List<DetallesAutor> detallesAutor = new List<DetallesAutor>();
+            detallesAutor.Add(da1);
+            detallesAutor.Add(da2);
 
-            return new Autor() { LcolDetallesAutor = detallesAutor };
+            Autor autor1 = new Autor() { LcolDetalles = detallesAutor };
+            autor1.LstrNombre = "Autor 2";
+            return autor1;
         }
     }
 }

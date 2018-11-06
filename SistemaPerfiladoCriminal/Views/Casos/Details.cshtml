@@ -1,0 +1,183 @@
+﻿@model SistemaPerfiladoCriminal.Models.Caso
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="form-group row">
+    <h3>@Html.DisplayFor(model => model.LstrNombre)</h3>
+</div>
+
+<ul class="nav nav-tabs">
+    <li class="active">
+        <a data-toggle="tab" href="#victima">Víctimas</a>
+    </li>
+    <li>
+        <a data-toggle="tab" href="#escenario">Escenarios</a>
+    </li>
+    <li>
+        <a data-toggle="tab" href="#reconstruccion">Reconstrucción</a>
+    </li>
+    <li>
+        <a data-toggle="tab" href="#autor">Autores</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade in active" id="victima" role="tabpanel" aria-labelledby="home-tab">
+        <br />
+
+        <div id="victimas" class="row">
+            <div class="col-lg-12 col-md-12">
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Víctima</th>
+                            <th scope="col">Ver</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var victima in Model.LcolVictimas)
+                        {
+                            <tr>
+                                <td>
+                                    @victima.LstrNombre (@victima.LstrAlias)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Detalles", "../Victimas/Details", new { id = victima.LintId })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Editar", "../Victimas/Edit", new { id = victima.LintId })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Eliminar", "../Victimas/Delete", new { id = victima.LintId })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade in" id="escenario" role="tabpanel" aria-labelledby="home-tab">
+        <br />
+
+        <div id="escenarios" class="row">
+            <div class="col-lg-12 col-md-12">
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Escenario</th>
+                            <th scope="col">Ver</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var escenario in Model.LcolEscenarios)
+                        {
+                            <tr>
+                                <td>
+                                    @escenario.LstrNombre
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Detalles", "../Escenarios/Details", new { id = escenario.LintId })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Editar", "../Escenarios/Edit", new { id = escenario.LintId })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Eliminar", "../Escenarios/Delete", new { id = escenario.LintId })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade in" id="reconstruccion" role="tabpanel" aria-labelledby="home-tab">
+        <br />
+
+        <div id="reconstrucciones" class="row">
+            <div class="col-lg-12 col-md-12">
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Reconstrucción</th>
+                            <th scope="col">Ver</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var reconstruccion in Model.LcolReconstrucciones)
+                        {
+                            <tr>
+                                <td>
+                                    @reconstruccion.LstrNombre
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Detalles", "../Reconstrucciones/Details", new { id = reconstruccion.LintId })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Editar", "../Reconstrucciones/Edit", new { id = reconstruccion.LintId })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Eliminar", "../Reconstrucciones/Delete", new { id = reconstruccion.LintId })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade in" id="autor" role="tabpanel" aria-labelledby="home-tab">
+        <br />
+
+        <div id="autores" class="row">
+            <div class="col-lg-12 col-md-12">
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Autor</th>
+                            <th scope="col">Ver</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var autor in Model.LcolAutores)
+                        {
+                            <tr>
+                                <td>
+                                    @autor.LstrNombre
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Detalles", "../Autores/Details", new { id = autor.LintId })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Editar", "../Autores/Edit", new { id = autor.LintId })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Eliminar", "../Autores/Delete", new { id = autor.LintId })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,23 +7,21 @@ using System.Web;
 
 namespace SistemaPerfiladoCriminal.Models
 {
-    [Table("EntrevistasVictimas")]
-    public class EntrevistaVictima
+    [Table("Personas")]
+    public class Persona
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int LintId { get; set; }
         public String LstrNombre { get; set; }
-        public String LstrDescripcion { get; set; }
 
-        public EntrevistaVictima()
+        public Persona()
         {
         }
 
-        public EntrevistaVictima(string lstrNombre, string lstrDescripcion)
+        public Persona(string lstrNombre)
         {
             LstrNombre = lstrNombre;
-            LstrDescripcion = lstrDescripcion;
         }
     }
 }

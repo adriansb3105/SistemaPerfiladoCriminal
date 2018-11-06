@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace SistemaPerfiladoCriminal.Models
 {
+    [Table("Victimas")]
     public class Victima
     {
         [Key]
@@ -52,12 +53,19 @@ namespace SistemaPerfiladoCriminal.Models
         public String LstrCausaMuerte { get; set; }
         public String LstrLesionesEncontradasAutopsia { get; set; }
         public String LstrToxicologia { get; set; }
-        public MadreVictima LmvMadreVictima { get; set; }
-        public PadreVictima LpvPadreVictima { get; set; }
-        public MatrimonioVictima LmvMatrimonioVictima { get; set; }
-        public ParejaSentimentalVictima LpsvParejaSentimentalVictima { get; set; }
-        public ICollection<HermanoVictima> LcolHermanos { get; set; }
-        public ICollection<HijoVictima> LcolHijos { get; set; }
-        public ICollection<EntrevistaVictima> LcolEntrevistas { get; set; }
+        public Persona LmvMadreVictima { get; set; }
+        public Persona LpvPadreVictima { get; set; }
+        public Persona LmvMatrimonioVictima { get; set; }
+        public Persona LpsvParejaSentimentalVictima { get; set; }
+        public Persona LcolHermanos { get; set; }
+        public Persona LcolHijos { get; set; }
+        public List<EntrevistaVictima> LcolEntrevistas { get; set; }
+        public Caso caso;
+
+        public Victima()
+        {
+            this.LcolEntrevistas = new List<EntrevistaVictima>();
+            this.caso = new Caso();
+        }
     }
 }

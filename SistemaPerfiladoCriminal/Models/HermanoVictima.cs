@@ -1,19 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SistemaPerfiladoCriminal.Models
 {
-    public class HermanoVictima
+    [Table("HermanosVictima")]
+    public class HermanoVictima : Persona
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int LintId { get; set; }
-        public String LstrNombre { get; set; }
+        public Persona persona;
         public String LstrTelefono { get; set; }
+
+        public HermanoVictima()
+        {
+        }
+
+        public HermanoVictima(string lstrTelefono, String lstrNombre) : base(lstrNombre)
+        {
+            this.persona = new Persona(lstrNombre);
+            LstrTelefono = lstrTelefono;
+        }
     }
 }

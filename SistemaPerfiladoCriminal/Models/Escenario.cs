@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 
 namespace SistemaPerfiladoCriminal.Models
 {
+    [Table("Escenario")]
     public class Escenario
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int LintId { get; set; }
+        public String LstrNombre { get; set; }
         public String LstrDiaHallazgo { get; set; }
         public DateTime LstrFechaHallazgo { get; set; }
         public String LstrHoraHallazgo { get; set; }
@@ -29,7 +31,21 @@ namespace SistemaPerfiladoCriminal.Models
         public String LstrDictamenMedicoLegal { get; set; }
         public String LstrCustodiaSitioSuceso { get; set; }
         public DateTime LdtiHoraLevantamientoCuerpo { get; set; }
-        public ICollection<Indicio> LcolIndicios { get; set; }
-        public ICollection<EntrevistaEscenario> LcolEntrevistas { get; set; }
+        public List<Indicio> LcolIndicios { get; set; }
+        public List<EntrevistaEscenario> LcolEntrevistas { get; set; }
+        public Caso caso;
+
+        public Escenario()
+        {
+        }
+
+        public Escenario(String lstrNombre)
+        {
+            this.LstrNombre = lstrNombre;
+            this.LcolEntrevistas = new List<EntrevistaEscenario>();
+            this.LcolIndicios = new List<Indicio>();
+            this.caso = new Caso();
+        }
+
     }
 }
