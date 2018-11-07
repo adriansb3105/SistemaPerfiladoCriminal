@@ -59,7 +59,7 @@ namespace SistemaPerfiladoCriminal.Models
         public String LpsvParejaSentimentalVictima { get; set; }
         public String LcolHermanos { get; set; }
         public String LcolHijos { get; set; }
-        public List<EntrevistaVictima> LcolEntrevistas { get; set; }
+        public virtual List<EntrevistaVictima> LcolEntrevistas { get; set; }
         public Caso caso;
 
         public Victima()

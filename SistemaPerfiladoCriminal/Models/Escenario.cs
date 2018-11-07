@@ -31,8 +31,8 @@ namespace SistemaPerfiladoCriminal.Models
         public String LstrDictamenMedicoLegal { get; set; }
         public String LstrCustodiaSitioSuceso { get; set; }
         public DateTime LdtiHoraLevantamientoCuerpo { get; set; }
-        public List<Indicio> LcolIndicios { get; set; }
-        public List<EntrevistaEscenario> LcolEntrevistas { get; set; }
+        public virtual List<Indicio> LcolIndicios { get; set; }
+        public virtual List<EntrevistaEscenario> LcolEntrevistas { get; set; }
         public Caso caso;
 
         public Escenario()

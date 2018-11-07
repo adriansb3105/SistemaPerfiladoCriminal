@@ -12,21 +12,33 @@
 </p>
 <table class="table">
     <tr>
+        <th>Id detalle</th>
         <th>
             @Html.DisplayNameFor(model => model.LstrDetalle)
         </th>
+        <th>Nombre autor</th>
+        <th>Id autor</th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.LintId)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.LstrDetalle)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.LintId }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.LintId }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id=item.LintId })
+            @Html.DisplayFor(modelItem => item.LAutor.LstrNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LAutor.LintId)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.LintId }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.LintId }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.LintId })
         </td>
     </tr>
 }

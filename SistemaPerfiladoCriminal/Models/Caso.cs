@@ -14,10 +14,10 @@ namespace SistemaPerfiladoCriminal.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int LintId { get; set; }
         public String LstrNombre { get; set; }
-        public List<Victima> LcolVictimas { get; set; }
-        public List<Escenario> LcolEscenarios { get; set; }
-        public List<Reconstruccion> LcolReconstrucciones { get; set; }
-        public List<Autor> LcolAutores { get; set; }
+        public virtual List<Victima> LcolVictimas { get; set; }
+        public virtual List<Escenario> LcolEscenarios { get; set; }
+        public virtual List<Reconstruccion> LcolReconstrucciones { get; set; }
+        public virtual List<Autor> LcolAutores { get; set; }
 
         public Caso()
         {
