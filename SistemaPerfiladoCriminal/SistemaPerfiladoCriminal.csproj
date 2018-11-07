@@ -192,11 +192,19 @@
     <Compile Include="Context\Contexto.cs" />
     <Compile Include="Controllers\AdministradorController.cs" />
     <Compile Include="Controllers\AutoresController.cs" />
+    <Compile Include="Controllers\CaracteristicasReconstruccionesController.cs" />
     <Compile Include="Controllers\CasosController.cs" />
+    <Compile Include="Controllers\DetallesAutoresController.cs" />
+    <Compile Include="Controllers\EntrevistaEscenariosController.cs" />
+    <Compile Include="Controllers\EntrevistaVictimasController.cs" />
+    <Compile Include="Controllers\EscenariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IndiciosController.cs" />
     <Compile Include="Controllers\IngresarController.cs" />
+    <Compile Include="Controllers\ReconstruccionesController.cs" />
     <Compile Include="Controllers\RegistroController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\VictimasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -208,14 +216,7 @@
     <Compile Include="Models\EntrevistaEscenario.cs" />
     <Compile Include="Models\EntrevistaVictima.cs" />
     <Compile Include="Models\Escenario.cs" />
-    <Compile Include="Models\HermanoVictima.cs" />
-    <Compile Include="Models\HijoVictima.cs" />
     <Compile Include="Models\Indicio.cs" />
-    <Compile Include="Models\MadreVictima.cs" />
-    <Compile Include="Models\MatrimonioVictima.cs" />
-    <Compile Include="Models\PadreVictima.cs" />
-    <Compile Include="Models\ParejaSentimentalVictima.cs" />
-    <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\Reconstruccion.cs" />
     <Compile Include="Models\Victima.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -260,7 +261,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\requests.js" />
+    <Content Include="Scripts\tabs.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -288,6 +289,46 @@
     <Content Include="Views\Autores\Details.cshtml" />
     <Content Include="Views\Autores\Edit.cshtml" />
     <Content Include="Views\Autores\Index.cshtml" />
+    <Content Include="Views\CaracteristicasReconstrucciones\Create.cshtml" />
+    <Content Include="Views\CaracteristicasReconstrucciones\Delete.cshtml" />
+    <Content Include="Views\CaracteristicasReconstrucciones\Details.cshtml" />
+    <Content Include="Views\CaracteristicasReconstrucciones\Edit.cshtml" />
+    <Content Include="Views\CaracteristicasReconstrucciones\Index.cshtml" />
+    <Content Include="Views\DetallesAutores\Create.cshtml" />
+    <Content Include="Views\DetallesAutores\Delete.cshtml" />
+    <Content Include="Views\DetallesAutores\Details.cshtml" />
+    <Content Include="Views\DetallesAutores\Edit.cshtml" />
+    <Content Include="Views\DetallesAutores\Index.cshtml" />
+    <Content Include="Views\EntrevistaEscenarios\Create.cshtml" />
+    <Content Include="Views\EntrevistaEscenarios\Delete.cshtml" />
+    <Content Include="Views\EntrevistaEscenarios\Details.cshtml" />
+    <Content Include="Views\EntrevistaEscenarios\Edit.cshtml" />
+    <Content Include="Views\EntrevistaEscenarios\Index.cshtml" />
+    <Content Include="Views\EntrevistaVictimas\Create.cshtml" />
+    <Content Include="Views\EntrevistaVictimas\Delete.cshtml" />
+    <Content Include="Views\EntrevistaVictimas\Details.cshtml" />
+    <Content Include="Views\EntrevistaVictimas\Edit.cshtml" />
+    <Content Include="Views\EntrevistaVictimas\Index.cshtml" />
+    <Content Include="Views\Escenarios\Create.cshtml" />
+    <Content Include="Views\Escenarios\Delete.cshtml" />
+    <Content Include="Views\Escenarios\Details.cshtml" />
+    <Content Include="Views\Escenarios\Edit.cshtml" />
+    <Content Include="Views\Escenarios\Index.cshtml" />
+    <Content Include="Views\Indicios\Create.cshtml" />
+    <Content Include="Views\Indicios\Delete.cshtml" />
+    <Content Include="Views\Indicios\Details.cshtml" />
+    <Content Include="Views\Indicios\Edit.cshtml" />
+    <Content Include="Views\Indicios\Index.cshtml" />
+    <Content Include="Views\Reconstrucciones\Create.cshtml" />
+    <Content Include="Views\Reconstrucciones\Delete.cshtml" />
+    <Content Include="Views\Reconstrucciones\Details.cshtml" />
+    <Content Include="Views\Reconstrucciones\Edit.cshtml" />
+    <Content Include="Views\Reconstrucciones\Index.cshtml" />
+    <Content Include="Views\Victimas\Create.cshtml" />
+    <Content Include="Views\Victimas\Delete.cshtml" />
+    <Content Include="Views\Victimas\Details.cshtml" />
+    <Content Include="Views\Victimas\Edit.cshtml" />
+    <Content Include="Views\Victimas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,53 @@
+﻿@model SistemaPerfiladoCriminal.Models.Victima
+
+@{
+    ViewBag.Title = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Está seguro que desea eliminar este elemento?</h3>
+<div>
+    <h4>Víctima</h4>
+    <hr />
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-md-2">Foto</label>
+            <div class="col-md-10">
+                <div class="victima-image-div">
+                    <img src=@Html.DisplayFor(model => model.LstrFotoURL) id="victima-image" class="rounded-circle img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Nombre</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrNombre)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Alias</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrAlias)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Cédula</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrCedula)
+            </div>
+        </div>
+    </div>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> 
+        </div>
+    }
+</div>

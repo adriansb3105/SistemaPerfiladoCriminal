@@ -54,19 +54,7 @@ namespace SistemaPerfiladoCriminal.Migrations
             Indicio indicio1 = new Indicio("Indicio 2");
             List<Indicio> indicios = new List<Indicio>();
             indicios.Add(indicio1);
-
-            Persona madreVictima = new MadreVictima("Telelefono madre 2", "Madre 2");
-
-            Persona padreVictima = new PadreVictima("Telefono padre 2", "Padre 2");
-
-            Persona matrimonioVictima = new MatrimonioVictima("Matrimonio Cedula 2", "Matrimonio Nacionalidad 2", new DateTime(2005, 04, 10, 16, 25, 00), "Matrimonio nombre 2");
-
-            Persona parejaSentimentalVictima = new ParejaSentimentalVictima("Pareja sentimental cedula 2", "Pareja sentimental alias 2", "Pareja sentimental telefono 2", "Pareja sentimental nombre 2");
-
-            Persona hermanoVictima1 = new HermanoVictima("telefono hermano 2", "Hermano 2");
-
-            Persona hijo1 = new HijoVictima("hijo 2 cedula", "hijo 2 nacionalidad", 23, "hijo 2 telefono", "hijo 2 nombre");
-
+            
             EntrevistaVictima entrevista1 = new EntrevistaVictima("entrevista 3 nombre", "entrevista 3 descripcion");
 
             EntrevistaVictima entrevista2 = new EntrevistaVictima("entrevista 4 nombre", "entrevista 4 descripcion");
@@ -82,7 +70,7 @@ namespace SistemaPerfiladoCriminal.Migrations
                 LstrCausa = "Causa 2",
                 LstrAlias = "Alias 2",
                 LstrSexo = "Femenino",
-                LstrCedula = "222222222222",
+                LstrCedula = "1111111111111111",
                 LstrNacionalidad = "costarricense",
                 LstrTez = "Blanca",
                 LstrCabello = "Cafe",
@@ -116,12 +104,12 @@ namespace SistemaPerfiladoCriminal.Migrations
                 LintEdad = 38,
                 LdblPeso = 70.2,
                 LdblEstatura = 1.80,
-                LmvMadreVictima = madreVictima,
-                LpvPadreVictima = padreVictima,
-                LmvMatrimonioVictima = matrimonioVictima,
-                LpsvParejaSentimentalVictima = parejaSentimentalVictima,
-                LcolHermanos = hermanoVictima1,
-                LcolHijos = hijo1,
+                LmvMadreVictima = "Madre 1, 888888888",
+                LpvPadreVictima = "Padre 1, 77777777",
+                LmvMatrimonioVictima = "Matrimonio Nacionalidad 2, 2222222222, Costarricense, 10/2/1950",
+                LpsvParejaSentimentalVictima = "Pareja sentimental 2, 123712398213, Pareja sentimental alias 1, Pareja sentimental telefono 1",
+                LcolHermanos = "Hermano 1, 6666887687",
+                LcolHijos = "hijo 1 nombre, cedula, hijo 1 nacionalidad, 23, hijo 1 telefono",
                 LcolEntrevistas = entrevistas
             };
         }

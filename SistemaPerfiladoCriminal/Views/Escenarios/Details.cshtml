@@ -1,0 +1,137 @@
+﻿@model SistemaPerfiladoCriminal.Models.Escenario
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Escenario</h4>
+    <hr />
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Nombre</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrNombre)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Día del hallazgo</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrDiaHallazgo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Fecha del hallazgo</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrFechaHallazgo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Hora del hallazgo</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrHoraHallazgo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Ubicación</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrUbicacion)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Sitio del hallazgo</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrSitioHallazgo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Características del sitio</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrCaracteristicasSitio)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Condiciones del acceso</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrCondionesAcceso)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Frecuencia de paso</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrFrecuenciaPaso)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">La víctima fue encontrada por</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrVictimaEncontradaPor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Posición del cuerpo</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrPosicionCuerpo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Descripción de vestimentas</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrDescripcionVestimentas)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Pertenencias</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrPertenencias)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Fenómenos cadavéricos</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrFenomenosCadavericos)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Dictamen médico legal</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrDictamenMedicoLegal)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Hora del levantamiento del cuerpo</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LdtiHoraLevantamientoCuerpo)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Custodia del sitio del suceso</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrCustodiaSitioSuceso)
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.LintId })
+</p>

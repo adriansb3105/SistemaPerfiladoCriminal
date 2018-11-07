@@ -32,3 +32,13 @@ textarea {
     margin-right: auto;
     margin-left: auto;
 }
+
+.victima-image-div {
+    width: 15em;
+    height: 15em;
+}
+
+.foto-image {
+    width: 100%;
+    height: auto;
+}

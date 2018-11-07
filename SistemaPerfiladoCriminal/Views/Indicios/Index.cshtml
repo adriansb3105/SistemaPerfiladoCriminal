@@ -1,0 +1,34 @@
+﻿@model IEnumerable<SistemaPerfiladoCriminal.Models.Indicio>
+
+@{
+    ViewBag.Title = "Indicios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Indicios</h2>
+
+<p>
+    @Html.ActionLink("Crear indicio", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrDescripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrDescripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.LintId }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.LintId }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.LintId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -53,12 +53,12 @@ namespace SistemaPerfiladoCriminal.Models
         public String LstrCausaMuerte { get; set; }
         public String LstrLesionesEncontradasAutopsia { get; set; }
         public String LstrToxicologia { get; set; }
-        public Persona LmvMadreVictima { get; set; }
-        public Persona LpvPadreVictima { get; set; }
-        public Persona LmvMatrimonioVictima { get; set; }
-        public Persona LpsvParejaSentimentalVictima { get; set; }
-        public Persona LcolHermanos { get; set; }
-        public Persona LcolHijos { get; set; }
+        public String LmvMadreVictima { get; set; }
+        public String LpvPadreVictima { get; set; }
+        public String LmvMatrimonioVictima { get; set; }
+        public String LpsvParejaSentimentalVictima { get; set; }
+        public String LcolHermanos { get; set; }
+        public String LcolHijos { get; set; }
         public List<EntrevistaVictima> LcolEntrevistas { get; set; }
         public Caso caso;
 

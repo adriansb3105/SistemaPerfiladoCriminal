@@ -1,19 +1,19 @@
 ﻿@model IEnumerable<SistemaPerfiladoCriminal.Models.Caso>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Casos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Casos</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear caso", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.LstrNombre)
+            Lista de casos
         </th>
         <th></th>
     </tr>
@@ -24,9 +24,9 @@
             @Html.DisplayFor(modelItem => item.LstrNombre)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.LintId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.LintId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.LintId })
+            @Html.ActionLink("Editar", "Edit", new { id=item.LintId }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.LintId }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.LintId })
         </td>
     </tr>
 }

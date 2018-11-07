@@ -11,9 +11,7 @@
     <thead>
         <tr>
             <th scope="col">Detalle</th>
-            <th scope="col">Ver</th>
-            <th scope="col">Editar</th>
-            <th scope="col">Eliminar</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -24,15 +22,13 @@
                 @detalle.LstrDetalle
             </td>
             <td>
-                @Html.ActionLink("Detalles", "../Detalles/Details", new { id = detalle.LintId })
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "../Detalles/Edit", new { id = detalle.LintId })
-            </td>
-            <td>
-                @Html.ActionLink("Eliminar", "../Detalles/Delete", new { id = detalle.LintId })
+                @Html.ActionLink("Editar", "../DetallesAutores/Edit", new { id = detalle.LintId }) |
+                @Html.ActionLink("Detalles", "../DetallesAutores/Details", new { id = detalle.LintId }) |
+                @Html.ActionLink("Eliminar", "../DetDetallesAutoresalles/Delete", new { id = detalle.LintId })
             </td>
         </tr>
         }
     </tbody>
 </table>
+
+

@@ -18,7 +18,7 @@ namespace SistemaPerfiladoCriminal.Controllers
         // GET: Casos
         public ActionResult Index()
         {
-            return View(db.Casos.ToList());
+            return View(db.Casos.OrderBy(c => c.LstrNombre).ToList());
         }
 
         // GET: Casos/Details/5
@@ -34,10 +34,10 @@ namespace SistemaPerfiladoCriminal.Controllers
                 return HttpNotFound();
             }
 
-            List<Victima> victimas = db.Victimas.ToList();
-            List<Escenario> escenarios = db.Escenarios.ToList();
-            List<Reconstruccion> reconstrucciones = db.Reconstrucciones.ToList();
-            List<Autor> autores = db.Autores.ToList();
+            List<Victima> victimas = db.Victimas.OrderBy(v => v.LstrNombre).ToList();
+            List<Escenario> escenarios = db.Escenarios.OrderBy(e => e.LstrNombre).ToList();
+            List<Reconstruccion> reconstrucciones = db.Reconstrucciones.OrderBy(r => r.LstrNombre).ToList();
+            List<Autor> autores = db.Autores.OrderBy(a => a.LstrNombre).ToList();
 
             return View(caso);
         }

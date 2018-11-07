@@ -1,0 +1,26 @@
+﻿@model SistemaPerfiladoCriminal.Models.Reconstruccion
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Reconstrucción</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label>Nombre</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrNombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.LintId })
+</p>

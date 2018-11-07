@@ -1,0 +1,26 @@
+﻿@model SistemaPerfiladoCriminal.Models.Indicio
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Indicio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrDescripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrDescripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.LintId })
+</p>
