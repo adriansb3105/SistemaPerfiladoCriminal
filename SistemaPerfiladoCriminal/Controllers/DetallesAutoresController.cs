@@ -13,6 +13,7 @@ namespace SistemaPerfiladoCriminal.Controllers
 {
     public class DetallesAutoresController : Controller
     {
+        private int idAutor;
         private Contexto db = new Contexto();
 
         // GET: DetallesAutores
@@ -36,9 +37,24 @@ namespace SistemaPerfiladoCriminal.Controllers
             return View(detallesAutor);
         }
 
-        // GET: DetallesAutores/Create
-        public ActionResult Create()
+        [HttpGet]
+        [Route("{id}?")] //Matches GET ComicBooks/Spiderman
+        public ActionResult Create(int id)
         {
+            /*
+            List<SelectListItem> listItems = new List<SelectListItem>();
+            List<Autor> autores = db.Autores.ToList();
+            foreach (var autor in autores)
+            {
+                listItems.Add(new SelectListItem
+                {
+                    Value = autor.LintId.ToString(),
+                    Text = autor.LstrNombre
+                });
+            }
+            ViewData["autores"] = listItems;
+            */
+            this.idAutor = id;
             return View();
         }
 
@@ -47,13 +63,20 @@ namespace SistemaPerfiladoCriminal.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LintId,LstrDetalle")] DetallesAutor detallesAutor)
+        public ActionResult Create([Bind(Include = "LintId,LstrDetalle,LAutor")] DetallesAutor detallesAutor)
         {
             if (ModelState.IsValid)
             {
-                db.DetallesAutor.Add(detallesAutor);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                Autor autor = db.Autores.Find(this.idAutor);
+
+                if (autor != null)
+                {
+                    autor.LcolDetalles.Add(detallesAutor);
+                    detallesAutor.LAutor = autor;
+                    db.DetallesAutor.Add(detallesAutor);
+                    db.SaveChanges();
+                }
+                return RedirectToAction("../Autores/Details/"+autor.LintId);
             }
 
             return View(detallesAutor);

@@ -56,7 +56,7 @@ namespace SistemaPerfiladoCriminal.Controllers
             {
                 db.Autores.Add(autor);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details/" + autor.LintId);
             }
 
             return View(autor);
@@ -88,7 +88,7 @@ namespace SistemaPerfiladoCriminal.Controllers
             {
                 db.Entry(autor).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details/" + autor.LintId);
             }
             return View(autor);
         }

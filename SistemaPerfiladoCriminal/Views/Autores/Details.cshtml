@@ -7,6 +7,8 @@
 
 <h2>@Model.LstrNombre</h2>
 
+@Html.ActionLink("Crear detalle", "../DetallesAutores/Create/" + Model.LintId)
+
 <table class="table table-hover">
     <thead>
         <tr>
@@ -17,15 +19,15 @@
     <tbody>
         @foreach (var detalle in Model.LcolDetalles.ToList())
         {
-        <tr>
-            <td>
-                @detalle.LstrDetalle
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "../DetallesAutores/Edit", new { id = detalle.LintId }) |
-                @Html.ActionLink("Eliminar", "../DetallesAutores/Delete", new { id = detalle.LintId })
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    @detalle.LstrDetalle
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "../DetallesAutores/Edit", new { id = detalle.LintId }) |
+                    @Html.ActionLink("Eliminar", "../DetallesAutores/Delete", new { id = detalle.LintId })
+                </td>
+            </tr>
         }
     </tbody>
 </table>
