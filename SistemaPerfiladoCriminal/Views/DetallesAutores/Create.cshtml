@@ -5,12 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!--
-@{
-    var autores = (List<SelectListItem>)ViewData["autores"];
-}
--->
-
 <h2>Crear</h2>
 
 @using (Html.BeginForm())
@@ -21,15 +15,7 @@
     <h4>Detalles de autor</h4>
     <hr />
 
-    <!--
-    <div class="form-group">
-        <label>Seleccione el autor</label>
-        @Html.DropDownListFor(model => model.LAutor.LintId,
-        autores,
-        "Seleccion el autor",
-        new { @class = "form-control" })
-    </div>
-        -->
+   
 
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="form-group">

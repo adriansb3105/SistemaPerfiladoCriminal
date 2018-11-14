@@ -13,6 +13,7 @@ namespace SistemaPerfiladoCriminal.Controllers
 {
     public class AutoresController : Controller
     {
+        private static int idCaso;
         private Contexto db = new Contexto();
 
         // GET: Autores
@@ -39,9 +40,11 @@ namespace SistemaPerfiladoCriminal.Controllers
             return View(autor);
         }
 
-        // GET: Autores/Create
-        public ActionResult Create()
+        [HttpGet]
+        [Route("{id}?")]
+        public ActionResult Create(int id)
         {
+            idCaso = id;
             return View();
         }
 
@@ -54,9 +57,17 @@ namespace SistemaPerfiladoCriminal.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Autores.Add(autor);
-                db.SaveChanges();
-                return RedirectToAction("Details/" + autor.LintId);
+                Caso caso = db.Casos.Find(idCaso);
+
+                if (caso != null)
+                {
+                    caso.LcolAutores.Add(autor);
+                    autor.caso = caso;
+                    db.Autores.Add(autor);
+                    db.SaveChanges();
+
+                    return RedirectToAction("../Casos/Details/" + caso.LintId);
+                }
             }
 
             return View(autor);

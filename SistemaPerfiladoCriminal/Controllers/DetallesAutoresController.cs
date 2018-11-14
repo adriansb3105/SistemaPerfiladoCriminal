@@ -38,7 +38,7 @@ namespace SistemaPerfiladoCriminal.Controllers
         }
 
         [HttpGet]
-        [Route("{id}?")] //Matches GET ComicBooks/Spiderman
+        [Route("{id}?")]
         public ActionResult Create(int id)
         {
             /*

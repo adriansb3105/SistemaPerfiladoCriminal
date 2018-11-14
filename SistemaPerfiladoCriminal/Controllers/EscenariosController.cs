@@ -13,6 +13,7 @@ namespace SistemaPerfiladoCriminal.Controllers
 {
     public class EscenariosController : Controller
     {
+        private static int idCaso;
         private Contexto db = new Contexto();
 
         // GET: Escenarios
@@ -36,9 +37,11 @@ namespace SistemaPerfiladoCriminal.Controllers
             return View(escenario);
         }
 
-        // GET: Escenarios/Create
-        public ActionResult Create()
+        [HttpGet]
+        [Route("{id}?")]
+        public ActionResult Create(int id)
         {
+            idCaso = id;
             return View();
         }
 
@@ -51,9 +54,17 @@ namespace SistemaPerfiladoCriminal.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Escenarios.Add(escenario);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                Caso caso = db.Casos.Find(idCaso);
+
+                if (caso != null)
+                {
+                    caso.LcolEscenarios.Add(escenario);
+                    escenario.caso = caso;
+                    db.Escenarios.Add(escenario);
+                    db.SaveChanges();
+
+                    return RedirectToAction("../Casos/Details/" + caso.LintId);
+                }
             }
 
             return View(escenario);
