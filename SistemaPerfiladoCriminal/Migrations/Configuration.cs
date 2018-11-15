@@ -65,7 +65,7 @@ namespace SistemaPerfiladoCriminal.Migrations
             
             return new Victima()
             {
-                LstrFotoURL = "http://www.noverbal.es/uploads/blog/criminal.jpg",
+                //LstrFotoURL = "http://www.noverbal.es/uploads/blog/criminal.jpg",
                 LstrNombre = "Victima 2",
                 LstrCausa = "Causa 2",
                 LstrAlias = "Alias 2",

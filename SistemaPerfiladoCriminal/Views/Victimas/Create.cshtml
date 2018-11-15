@@ -7,7 +7,7 @@
 
 <h2>Crear</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Create", "Victimas", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
@@ -19,7 +19,8 @@
     <div class="form-group">
         <label class="control-label col-md-2">Foto</label>
         <div class="col-sm-10">
-            <input type="file" id="foto" accept="image/png, image/jpeg">
+            <input type="file" id="foto" name="foto" accept="image/png, image/jpeg">
+            @Html.ValidationMessageFor(model => model.LstrFotoURL, "", new { @class = "text-danger" })
         </div>
     </div>
 

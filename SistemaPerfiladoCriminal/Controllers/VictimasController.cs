@@ -50,7 +50,7 @@ namespace SistemaPerfiladoCriminal.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LintId,LstrFotoURL,LstrNombre,LstrCausa,LstrAlias,LstrSexo,LstrCedula,LdtiFechaNacimiento,LstrNacionalidad,LintEdad,LdblPeso,LdblEstatura,LstrTez,LstrCabello,LstrOjos,LstrMarcasEspeciales,LstrOcupacion,LstrEscolaridad,LstrCreenciaReligiosa,LstrHabitos,LstrPasatiempos,LstrPadecimientos,LstrHistorialMedico,LstrLugarNacimiento,LstrDireccion,LstrTelefono,LstrEstadoConyugal,LstrSalidasPais,LstrExpedienteCriminal,LstrPasadaPor,LstrPrivacionLibertad,LstrInformacionResenia,LstrAutopsia,LstrDictamenToxicologico,LstrLaboratorio,LstrFluidosBiologicos,LstrManeraMuerte,LstrCausaMuerte,LstrLesionesEncontradasAutopsia,LstrToxicologia,LmvMadreVictima,LpvPadreVictima,LmvMatrimonioVictima,LpsvParejaSentimentalVictima,LcolHermanos,LcolHijos")] Victima victima)
+        public ActionResult Create([Bind(Include = "LintId,LstrFotoURL,LstrNombre,LstrCausa,LstrAlias,LstrSexo,LstrCedula,LdtiFechaNacimiento,LstrNacionalidad,LintEdad,LdblPeso,LdblEstatura,LstrTez,LstrCabello,LstrOjos,LstrMarcasEspeciales,LstrOcupacion,LstrEscolaridad,LstrCreenciaReligiosa,LstrHabitos,LstrPasatiempos,LstrPadecimientos,LstrHistorialMedico,LstrLugarNacimiento,LstrDireccion,LstrTelefono,LstrEstadoConyugal,LstrSalidasPais,LstrExpedienteCriminal,LstrPasadaPor,LstrPrivacionLibertad,LstrInformacionResenia,LstrAutopsia,LstrDictamenToxicologico,LstrLaboratorio,LstrFluidosBiologicos,LstrManeraMuerte,LstrCausaMuerte,LstrLesionesEncontradasAutopsia,LstrToxicologia,LmvMadreVictima,LpvPadreVictima,LmvMatrimonioVictima,LpsvParejaSentimentalVictima,LcolHermanos,LcolHijos")] Victima victima, HttpPostedFileBase foto)
         {
             if (ModelState.IsValid)
             {
@@ -58,6 +58,12 @@ namespace SistemaPerfiladoCriminal.Controllers
 
                 if (caso != null)
                 {
+                    if (foto != null)
+                    {
+                        victima.LstrFotoURL = new byte[foto.ContentLength];
+                        foto.InputStream.Read(victima.LstrFotoURL, 0, foto.ContentLength);
+                    }
+
                     caso.LcolVictimas.Add(victima);
                     victima.caso = caso;
                     db.Victimas.Add(victima);

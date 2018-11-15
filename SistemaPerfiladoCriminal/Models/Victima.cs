@@ -16,7 +16,7 @@ namespace SistemaPerfiladoCriminal.Models
         public int LintId { get; set; }
 
         [DataType(DataType.ImageUrl, ErrorMessage = "Debe ingresar una imagen")]
-        public String LstrFotoURL { get; set; }
+        public byte[] LstrFotoURL { get; set; }
 
         [Required(ErrorMessage = "Este campo es requerido")]
         public String LstrNombre { get; set; }
