@@ -15,6 +15,7 @@ namespace SistemaPerfiladoCriminal.Context
             //update-database -Verbose
         }
 
+        public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Autor> Autores { get; set; }
         public DbSet<CaracteristicasReconstruccion> CaracteristicasReconstrucciones { get; set; }
         public DbSet<Caso> Casos { get; set; }
@@ -25,5 +26,8 @@ namespace SistemaPerfiladoCriminal.Context
         public DbSet<Indicio> Indicios { get; set; }
         public DbSet<Reconstruccion> Reconstrucciones { get; set; }
         public DbSet<Victima> Victimas { get; set; }
+
+        public System.Data.Entity.DbSet<SistemaPerfiladoCriminal.Models.InferenciaVictima> InferenciaVictimas { get; set; }
+        
     }
 }

@@ -17,11 +17,35 @@ namespace SistemaPerfiladoCriminal.Migrations
         {
             //  This method will be called after migrating to the latest version. //You can use the DbSet<T>.AddOrUpdate() helper extension method //to avoid creating duplicate seed data.
 
+
             context.Casos.AddOrUpdate(x => x.LintId, crearCaso(context));
             //context.Autores.AddOrUpdate(x => x.LintId, crearAutor(context));
             //context.Reconstrucciones.AddOrUpdate(x => x.LintId, crearReconstruccion(context));
             //context.Escenarios.AddOrUpdate(x => x.LintId, crearEscenario(context));
             //context.Victimas.AddOrUpdate(x => x.LintId, crearVictima(context));
+
+            context.Usuarios.AddOrUpdate(x => x.LintId, new Usuario("Juan", "jmena", "ab12", crearRolAdmin(context)));
+            context.Usuarios.AddOrUpdate(x => x.LintId, new Usuario("Pedro", "pjimenez", "acb123", crearRolConsulta(context)));
+        }
+
+        public Rol crearRolConsulta(SistemaPerfiladoCriminal.Context.Contexto context)
+        {
+            List<Permiso> permisos = new List<Permiso>();
+            permisos.Add(new Permiso("detalles_autor"));
+
+            Rol rol = new Rol("consulta", permisos);
+
+            return rol;
+        }
+
+        public Rol crearRolAdmin(SistemaPerfiladoCriminal.Context.Contexto context)
+        {
+            List<Permiso> permisos = new List<Permiso>();
+            permisos.Add(new Permiso("crear_autor"));
+
+            Rol rol = new Rol("administrador", permisos);
+
+            return rol;
         }
 
         public Caso crearCaso(SistemaPerfiladoCriminal.Context.Contexto context)
@@ -48,7 +72,7 @@ namespace SistemaPerfiladoCriminal.Migrations
                 LcolAutores = autores
             };
         }
-
+        
         public Victima crearVictima(SistemaPerfiladoCriminal.Context.Contexto context)
         {
             Indicio indicio1 = new Indicio("Indicio 2");

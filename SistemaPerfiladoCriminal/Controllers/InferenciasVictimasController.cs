@@ -11,120 +11,108 @@ using SistemaPerfiladoCriminal.Models;
 
 namespace SistemaPerfiladoCriminal.Controllers
 {
-    public class AutoresController : Controller
+    public class InferenciasVictimasController : Controller
     {
-        private static int idCaso;
         private Contexto db = new Contexto();
 
-        // GET: Autores
-        public ActionResult Index()
+        [HttpGet]
+        [Route("{id}?")]
+        public ActionResult Index(int id)
         {
-            return View(db.Autores.ToList());
+            return View(db.InferenciaVictimas.ToList());
         }
-        
+
+        // GET: InferenciasVictimas/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Autor autor = db.Autores.Find(id);
-            if (autor == null)
+            InferenciaVictima inferenciaVictima = db.InferenciaVictimas.Find(id);
+            if (inferenciaVictima == null)
             {
                 return HttpNotFound();
             }
-
-            List<DetallesAutor> detalles = db.DetallesAutor.ToList();
-            
-            return View(autor);
+            return View(inferenciaVictima);
         }
 
-        [HttpGet]
-        [Route("{id}?")]
-        public ActionResult Create(int id)
+        // GET: InferenciasVictimas/Create
+        public ActionResult Create()
         {
-            idCaso = id;
             return View();
         }
 
-        // POST: Autores/Create
+        // POST: InferenciasVictimas/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LintId,LstrNombre")] Autor autor)
+        public ActionResult Create([Bind(Include = "LintId,LstrTitulo,LstrDescripcion")] InferenciaVictima inferenciaVictima)
         {
             if (ModelState.IsValid)
             {
-                Caso caso = db.Casos.Find(idCaso);
-
-                if (caso != null)
-                {
-                    caso.LcolAutores.Add(autor);
-                    autor.caso = caso;
-                    db.Autores.Add(autor);
-                    db.SaveChanges();
-
-                    return RedirectToAction("../Casos/Details/" + caso.LintId);
-                }
+                db.InferenciaVictimas.Add(inferenciaVictima);
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
 
-            return View(autor);
+            return View(inferenciaVictima);
         }
 
-        // GET: Autores/Edit/5
+        // GET: InferenciasVictimas/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Autor autor = db.Autores.Find(id);
-            if (autor == null)
+            InferenciaVictima inferenciaVictima = db.InferenciaVictimas.Find(id);
+            if (inferenciaVictima == null)
             {
                 return HttpNotFound();
             }
-            return View(autor);
+            return View(inferenciaVictima);
         }
 
-        // POST: Autores/Edit/5
+        // POST: InferenciasVictimas/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "LintId,LstrNombre")] Autor autor)
+        public ActionResult Edit([Bind(Include = "LintId,LstrTitulo,LstrDescripcion")] InferenciaVictima inferenciaVictima)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(autor).State = EntityState.Modified;
+                db.Entry(inferenciaVictima).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Details/" + autor.LintId);
+                return RedirectToAction("Index");
             }
-            return View(autor);
+            return View(inferenciaVictima);
         }
 
-        // GET: Autores/Delete/5
+        // GET: InferenciasVictimas/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Autor autor = db.Autores.Find(id);
-            if (autor == null)
+            InferenciaVictima inferenciaVictima = db.InferenciaVictimas.Find(id);
+            if (inferenciaVictima == null)
             {
                 return HttpNotFound();
             }
-            return View(autor);
+            return View(inferenciaVictima);
         }
 
-        // POST: Autores/Delete/5
+        // POST: InferenciasVictimas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Autor autor = db.Autores.Find(id);
-            db.Autores.Remove(autor);
+            InferenciaVictima inferenciaVictima = db.InferenciaVictimas.Find(id);
+            db.InferenciaVictimas.Remove(inferenciaVictima);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

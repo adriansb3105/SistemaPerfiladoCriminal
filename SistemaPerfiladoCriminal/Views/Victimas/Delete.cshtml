@@ -16,7 +16,19 @@
             <label class="control-label col-md-2">Foto</label>
             <div class="col-md-10">
                 <div class="victima-image-div">
-                    <img src=@Html.DisplayFor(model => model.LstrFotoURL) id="victima-image" class="rounded-circle img-fluid" alt="">
+                    @{
+                        if (Model.LstrFotoURL != null)
+                        {
+                            var base64 = Convert.ToBase64String(Model.LstrFotoURL);
+                            var imgsrc = string.Format("data:image/gif;base64,{0}", base64);
+
+                            <img src=@imgsrc class="foto-image rounded-circle img-fluid" alt="">
+                        }
+                        else
+                        {
+                            <img src=~/Content/Img/desconocido.png class="foto-image rounded-circle img-fluid" alt="">
+                        }
+                    }
                 </div>
             </div>
         </div>

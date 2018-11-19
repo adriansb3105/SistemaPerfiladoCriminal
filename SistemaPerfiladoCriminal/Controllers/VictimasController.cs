@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using SistemaPerfiladoCriminal.Context;
 using SistemaPerfiladoCriminal.Models;
+using System.Threading.Tasks;
 
 namespace SistemaPerfiladoCriminal.Controllers
 {
@@ -15,7 +16,7 @@ namespace SistemaPerfiladoCriminal.Controllers
     {
         private static int idCaso;
         private Contexto db = new Contexto();
-
+        
         // GET: Victimas
         public ActionResult Index()
         {
@@ -34,6 +35,7 @@ namespace SistemaPerfiladoCriminal.Controllers
             {
                 return HttpNotFound();
             }
+
             return View(victima);
         }
 
@@ -96,10 +98,16 @@ namespace SistemaPerfiladoCriminal.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "LintId,LstrFotoURL,LstrNombre,LstrCausa,LstrAlias,LstrSexo,LstrCedula,LdtiFechaNacimiento,LstrNacionalidad,LintEdad,LdblPeso,LdblEstatura,LstrTez,LstrCabello,LstrOjos,LstrMarcasEspeciales,LstrOcupacion,LstrEscolaridad,LstrCreenciaReligiosa,LstrHabitos,LstrPasatiempos,LstrPadecimientos,LstrHistorialMedico,LstrLugarNacimiento,LstrDireccion,LstrTelefono,LstrEstadoConyugal,LstrSalidasPais,LstrExpedienteCriminal,LstrPasadaPor,LstrPrivacionLibertad,LstrInformacionResenia,LstrAutopsia,LstrDictamenToxicologico,LstrLaboratorio,LstrFluidosBiologicos,LstrManeraMuerte,LstrCausaMuerte,LstrLesionesEncontradasAutopsia,LstrToxicologia,LmvMadreVictima,LpvPadreVictima,LmvMatrimonioVictima,LpsvParejaSentimentalVictima,LcolHermanos,LcolHijos")] Victima victima)
+        public ActionResult Edit([Bind(Include = "LintId,LstrFotoURL,LstrNombre,LstrCausa,LstrAlias,LstrSexo,LstrCedula,LdtiFechaNacimiento,LstrNacionalidad,LintEdad,LdblPeso,LdblEstatura,LstrTez,LstrCabello,LstrOjos,LstrMarcasEspeciales,LstrOcupacion,LstrEscolaridad,LstrCreenciaReligiosa,LstrHabitos,LstrPasatiempos,LstrPadecimientos,LstrHistorialMedico,LstrLugarNacimiento,LstrDireccion,LstrTelefono,LstrEstadoConyugal,LstrSalidasPais,LstrExpedienteCriminal,LstrPasadaPor,LstrPrivacionLibertad,LstrInformacionResenia,LstrAutopsia,LstrDictamenToxicologico,LstrLaboratorio,LstrFluidosBiologicos,LstrManeraMuerte,LstrCausaMuerte,LstrLesionesEncontradasAutopsia,LstrToxicologia,LmvMadreVictima,LpvPadreVictima,LmvMatrimonioVictima,LpsvParejaSentimentalVictima,LcolHermanos,LcolHijos")] Victima victima, HttpPostedFileBase foto)
         {
             if (ModelState.IsValid)
-            {
+            {  
+                if (foto != null)
+                {
+                    victima.LstrFotoURL = new byte[foto.ContentLength];
+                    foto.InputStream.Read(victima.LstrFotoURL, 0, foto.ContentLength);
+                }
+                    
                 db.Entry(victima).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Details/"+victima.LintId);
@@ -141,5 +149,15 @@ namespace SistemaPerfiladoCriminal.Controllers
             }
             base.Dispose(disposing);
         }
+
+        [HttpPost]
+        [Route("AgregarInferencias")]
+        public JsonResult AgregarInferencias(String inferencia)
+        {
+
+
+            return Json("", JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

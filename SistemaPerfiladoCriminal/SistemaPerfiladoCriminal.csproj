@@ -190,7 +190,6 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Context\Contexto.cs" />
-    <Compile Include="Controllers\AdministradorController.cs" />
     <Compile Include="Controllers\AutoresController.cs" />
     <Compile Include="Controllers\CaracteristicasReconstruccionesController.cs" />
     <Compile Include="Controllers\CasosController.cs" />
@@ -200,6 +199,7 @@
     <Compile Include="Controllers\EscenariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IndiciosController.cs" />
+    <Compile Include="Controllers\InferenciasVictimasController.cs" />
     <Compile Include="Controllers\IngresarController.cs" />
     <Compile Include="Controllers\ReconstruccionesController.cs" />
     <Compile Include="Controllers\RegistroController.cs" />
@@ -217,7 +217,11 @@
     <Compile Include="Models\EntrevistaVictima.cs" />
     <Compile Include="Models\Escenario.cs" />
     <Compile Include="Models\Indicio.cs" />
+    <Compile Include="Models\InferenciaVictima.cs" />
+    <Compile Include="Models\Permiso.cs" />
     <Compile Include="Models\Reconstruccion.cs" />
+    <Compile Include="Models\Rol.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\Victima.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -227,6 +231,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Img\desconocido.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -278,7 +283,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Ingresar\Index.cshtml" />
     <Content Include="Views\Registro\Index.cshtml" />
-    <Content Include="Views\Administrador\Index.cshtml" />
     <Content Include="Views\Casos\Create.cshtml" />
     <Content Include="Views\Casos\Delete.cshtml" />
     <Content Include="Views\Casos\Details.cshtml" />
@@ -329,9 +333,15 @@
     <Content Include="Views\Victimas\Details.cshtml" />
     <Content Include="Views\Victimas\Edit.cshtml" />
     <Content Include="Views\Victimas\Index.cshtml" />
+    <Content Include="Views\InferenciasVictimas\Create.cshtml" />
+    <Content Include="Views\InferenciasVictimas\Delete.cshtml" />
+    <Content Include="Views\InferenciasVictimas\Details.cshtml" />
+    <Content Include="Views\InferenciasVictimas\Edit.cshtml" />
+    <Content Include="Views\InferenciasVictimas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\test\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
