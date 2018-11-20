@@ -1,0 +1,2 @@
+D:\Analisis\Proyecto\Version2\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\obj\Debug\SistemaPerfiladoCriminal.csprojAssemblyReference.cache
+D:\Analisis\Proyecto\Version2\SistemaPerfiladoCriminal\SistemaPerfiladoCriminal\obj\Debug\SistemaPerfiladoCriminal.csproj.CoreCompileInputs.cache

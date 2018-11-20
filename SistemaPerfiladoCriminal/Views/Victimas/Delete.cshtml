@@ -1,0 +1,384 @@
+﻿@model SistemaPerfiladoCriminal.Models.Victima
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Victima</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrFotoURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrFotoURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrNombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrCausa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrCausa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrAlias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrAlias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrSexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrSexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrCedula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrCedula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LdtiFechaNacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LdtiFechaNacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrNacionalidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrNacionalidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LintEdad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LintEdad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LdblPeso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LdblPeso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LdblEstatura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LdblEstatura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrTez)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrTez)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrCabello)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrCabello)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrOjos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrOjos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrMarcasEspeciales)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrMarcasEspeciales)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrOcupacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrOcupacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrEscolaridad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrEscolaridad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrCreenciaReligiosa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrCreenciaReligiosa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrHabitos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrHabitos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrPasatiempos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrPasatiempos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrPadecimientos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrPadecimientos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrHistorialMedico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrHistorialMedico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrLugarNacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrLugarNacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrDireccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrDireccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrTelefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrTelefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrEstadoConyugal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrEstadoConyugal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrSalidasPais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrSalidasPais)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrExpedienteCriminal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrExpedienteCriminal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrPasadaPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrPasadaPor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrPrivacionLibertad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrPrivacionLibertad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrInformacionResenia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrInformacionResenia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrAutopsia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrAutopsia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrDictamenToxicologico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrDictamenToxicologico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrLaboratorio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrLaboratorio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrFluidosBiologicos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrFluidosBiologicos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrManeraMuerte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrManeraMuerte)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrCausaMuerte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrCausaMuerte)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrLesionesEncontradasAutopsia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrLesionesEncontradasAutopsia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrToxicologia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrToxicologia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LmvMadreVictima)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LmvMadreVictima)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LpvPadreVictima)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LpvPadreVictima)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LmvMatrimonioVictima)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LmvMatrimonioVictima)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LpsvParejaSentimentalVictima)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LpsvParejaSentimentalVictima)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LcolHermanos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LcolHermanos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LcolHijos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LcolHijos)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

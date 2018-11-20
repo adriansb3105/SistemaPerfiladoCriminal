@@ -1,0 +1,129 @@
+﻿@model IEnumerable<SistemaPerfiladoCriminal.Models.Escenario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrDiaHallazgo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrFechaHallazgo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrHoraHallazgo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrUbicacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrSitioHallazgo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrCaracteristicasSitio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrCondionesAcceso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrFrecuenciaPaso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrVictimaEncontradaPor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrPosicionCuerpo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrDescripcionVestimentas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrPertenencias)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrFenomenosCadavericos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrDictamenMedicoLegal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrCustodiaSitioSuceso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LdtiHoraLevantamientoCuerpo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrDiaHallazgo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrFechaHallazgo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrHoraHallazgo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrUbicacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrSitioHallazgo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrCaracteristicasSitio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrCondionesAcceso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrFrecuenciaPaso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrVictimaEncontradaPor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrPosicionCuerpo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrDescripcionVestimentas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrPertenencias)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrFenomenosCadavericos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrDictamenMedicoLegal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrCustodiaSitioSuceso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LdtiHoraLevantamientoCuerpo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LintId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LintId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LintId })
+        </td>
+    </tr>
+}
+
+</table>
