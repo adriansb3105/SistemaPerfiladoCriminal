@@ -1,6 +1,7 @@
 ﻿@model SistemaPerfiladoCriminal.Models.Victima
 
 @{
+<<<<<<< HEAD
     ViewBag.Title = "Details";
 }
 
@@ -376,3 +377,374 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.LintId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+=======
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Víctima</h4>
+    <hr />
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Foto</label>
+            <div class="col-md-10">
+                <div class="victima-image-div">
+                    @{
+                        if (Model.LstrFotoURL != null)
+                        {
+                            var base64 = Convert.ToBase64String(Model.LstrFotoURL);
+                            var imgsrc = string.Format("data:image/gif;base64,{0}", base64);
+
+                            <img src=@imgsrc class="foto-image rounded-circle img-fluid" alt="">
+                        }
+                        else
+                        {
+                            <img src=~/Content/Img/desconocido.png class="foto-image rounded-circle img-fluid" alt="">
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Nombre</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrNombre)
+                <button class="btn btn-xs btn-default" onclick="agregarInferencia('Nombre: @Model.LstrNombre')">+</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Causa</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrCausa)
+                <button class="btn btn-xs btn-default" onclick="agregarInferencia('Causa: @Model.LstrCausa')">+</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Alias</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrAlias)
+                <button class="btn btn-xs btn-default" onclick="agregarInferencia('Alias: @Model.LstrAlias')">+</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Sexo</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrSexo)
+                <button class="btn btn-xs btn-default" onclick="agregarInferencia('Sexo: @Model.LstrSexo')">+</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Cédula</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrCedula)
+                <button class="btn btn-xs btn-default" onclick="agregarInferencia('Cédula: @Model.LstrCedula')">+</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Fecha de nacimiento</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LdtiFechaNacimiento)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Nacionalidad</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrNacionalidad)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Edad</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LintEdad)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Peso</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LdblPeso)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Estatura</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LdblEstatura)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Tez</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrTez)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Cabello</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrCabello)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Ojos</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrOjos)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Marcas especiales</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrMarcasEspeciales)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Ocupación</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrOcupacion)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Escolaridad</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrEscolaridad)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Creencia religiosa</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrCreenciaReligiosa)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Hábitos</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrHabitos)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Pasatiempos</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrPasatiempos)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Padecimientos</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrPadecimientos)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Historial médico</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrHistorialMedico)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Lugar de nacimiento</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrLugarNacimiento)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Dirección</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrDireccion)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Teléfono</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrTelefono)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Madre</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LmvMadreVictima)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Padre</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LpvPadreVictima)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Hermanos/as</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LcolHermanos)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Matrimonio</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LmvMatrimonioVictima)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Hijos/as</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LcolHijos)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Estado conyugal</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrEstadoConyugal)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Pareja sentimental</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LpsvParejaSentimentalVictima)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Salidas del país</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrSalidasPais)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Expediente criminal (Números y letras)</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrExpedienteCriminal)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Pasada por</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrPasadaPor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Privacion de libertad</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrPrivacionLibertad)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Información de reseña</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrInformacionResenia)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Autopsia</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrAutopsia)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Dictamen toxicológico</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrDictamenToxicologico)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Laboratorio</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrLaboratorio)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Fluídos biológicos</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrFluidosBiologicos)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Manera de muerte</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrManeraMuerte)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Causa de muerte</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrCausaMuerte)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Lesiones encontradas en autopsia</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrLesionesEncontradasAutopsia)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Toxicología</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrToxicologia)
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.LintId })
+</p>
+
+<script>
+    function agregarInferencia(inferencia) {
+        console.log(inferencia);
+
+        $.ajax({
+            url: "../AgregarInferencias",
+            type: "POST",
+            data: { inferencia: inferencia },
+            success: function (res) {
+                console.log(res);
+            },
+            error: function (xhr, status, error) {
+                console.log(xhr);
+                console.log(status);
+                console.log(error);
+            }
+        });
+    }
+</script>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3

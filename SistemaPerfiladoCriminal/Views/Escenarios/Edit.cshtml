@@ -1,11 +1,19 @@
 ﻿@model SistemaPerfiladoCriminal.Models.Escenario
 
 @{
+<<<<<<< HEAD
     ViewBag.Title = "Edit";
 }
 
 <h2>Edit</h2>
 
+=======
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editar</h2>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
 
 @using (Html.BeginForm())
 {
@@ -18,7 +26,11 @@
         @Html.HiddenFor(model => model.LintId)
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrNombre, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Nombre</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrNombre, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrNombre, "", new { @class = "text-danger" })
@@ -26,7 +38,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrDiaHallazgo, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Día del hallazgo</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrDiaHallazgo, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrDiaHallazgo, "", new { @class = "text-danger" })
@@ -34,7 +50,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrFechaHallazgo, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Fecha del hallazgo</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrFechaHallazgo, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrFechaHallazgo, "", new { @class = "text-danger" })
@@ -42,7 +62,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrHoraHallazgo, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Hora del hallazgo</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrHoraHallazgo, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrHoraHallazgo, "", new { @class = "text-danger" })
@@ -50,7 +74,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrUbicacion, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Ubicación</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrUbicacion, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrUbicacion, "", new { @class = "text-danger" })
@@ -58,7 +86,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrSitioHallazgo, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Sitio del hallazgo</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrSitioHallazgo, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrSitioHallazgo, "", new { @class = "text-danger" })
@@ -66,7 +98,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrCaracteristicasSitio, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Características del sitio</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrCaracteristicasSitio, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrCaracteristicasSitio, "", new { @class = "text-danger" })
@@ -74,7 +110,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrCondionesAcceso, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Condiciones del acceso</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrCondionesAcceso, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrCondionesAcceso, "", new { @class = "text-danger" })
@@ -82,7 +122,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrFrecuenciaPaso, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Frecuencia de paso</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrFrecuenciaPaso, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrFrecuenciaPaso, "", new { @class = "text-danger" })
@@ -90,7 +134,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrVictimaEncontradaPor, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">La víctima fue encontrada por</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrVictimaEncontradaPor, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrVictimaEncontradaPor, "", new { @class = "text-danger" })
@@ -98,7 +146,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrPosicionCuerpo, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Posición del cuerpo</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrPosicionCuerpo, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrPosicionCuerpo, "", new { @class = "text-danger" })
@@ -106,7 +158,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrDescripcionVestimentas, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Descripción de vestimentas</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrDescripcionVestimentas, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrDescripcionVestimentas, "", new { @class = "text-danger" })
@@ -114,7 +170,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrPertenencias, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Pertenencias</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrPertenencias, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrPertenencias, "", new { @class = "text-danger" })
@@ -122,7 +182,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrFenomenosCadavericos, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Fenómenos cadavéricos</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrFenomenosCadavericos, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrFenomenosCadavericos, "", new { @class = "text-danger" })
@@ -130,7 +194,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrDictamenMedicoLegal, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Dictamen médico legal</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrDictamenMedicoLegal, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrDictamenMedicoLegal, "", new { @class = "text-danger" })
@@ -138,7 +206,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrCustodiaSitioSuceso, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Hora del levantamiento del cuerpo</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrCustodiaSitioSuceso, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrCustodiaSitioSuceso, "", new { @class = "text-danger" })
@@ -146,7 +218,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LdtiHoraLevantamientoCuerpo, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Custodia del sitio del suceso</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LdtiHoraLevantamientoCuerpo, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LdtiHoraLevantamientoCuerpo, "", new { @class = "text-danger" })
@@ -155,11 +231,16 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
+<<<<<<< HEAD
                 <input type="submit" value="Save" class="btn btn-default" />
+=======
+                <input type="submit" value="Guardar" class="btn btn-default" />
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             </div>
         </div>
     </div>
 }
+<<<<<<< HEAD
 
 <div>
     @Html.ActionLink("Back to List", "Index")
@@ -168,3 +249,5 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+=======
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3

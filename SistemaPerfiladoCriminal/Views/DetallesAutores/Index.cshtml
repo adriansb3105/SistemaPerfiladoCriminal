@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<SistemaPerfiladoCriminal.Models.DetallesAutor>
 
 @{
+<<<<<<< HEAD
     ViewBag.Title = "Index";
 }
 
@@ -14,18 +15,55 @@
         <th>
             @Html.DisplayNameFor(model => model.LstrDetalle)
         </th>
+=======
+    ViewBag.Title = "Detalles de autor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles de autor</h2>
+
+<p>
+    @Html.ActionLink("Crear detalle", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Id detalle</th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrDetalle)
+        </th>
+        <th>Nombre autor</th>
+        <th>Id autor</th>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
+<<<<<<< HEAD
             @Html.DisplayFor(modelItem => item.LstrDetalle)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.LintId }) |
             @Html.ActionLink("Details", "Details", new { id=item.LintId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.LintId })
+=======
+            @Html.DisplayFor(modelItem => item.LintId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrDetalle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LAutor.LstrNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LAutor.LintId)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.LintId }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.LintId }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.LintId })
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
         </td>
     </tr>
 }

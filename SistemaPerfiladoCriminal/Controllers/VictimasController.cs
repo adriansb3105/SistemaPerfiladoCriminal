@@ -16,7 +16,11 @@ namespace SistemaPerfiladoCriminal.Controllers
     {
         private static int idCaso;
         private Contexto db = new Contexto();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
         // GET: Victimas
         public ActionResult Index()
         {
@@ -101,16 +105,27 @@ namespace SistemaPerfiladoCriminal.Controllers
         public ActionResult Edit([Bind(Include = "LintId,LstrFotoURL,LstrNombre,LstrCausa,LstrAlias,LstrSexo,LstrCedula,LdtiFechaNacimiento,LstrNacionalidad,LintEdad,LdblPeso,LdblEstatura,LstrTez,LstrCabello,LstrOjos,LstrMarcasEspeciales,LstrOcupacion,LstrEscolaridad,LstrCreenciaReligiosa,LstrHabitos,LstrPasatiempos,LstrPadecimientos,LstrHistorialMedico,LstrLugarNacimiento,LstrDireccion,LstrTelefono,LstrEstadoConyugal,LstrSalidasPais,LstrExpedienteCriminal,LstrPasadaPor,LstrPrivacionLibertad,LstrInformacionResenia,LstrAutopsia,LstrDictamenToxicologico,LstrLaboratorio,LstrFluidosBiologicos,LstrManeraMuerte,LstrCausaMuerte,LstrLesionesEncontradasAutopsia,LstrToxicologia,LmvMadreVictima,LpvPadreVictima,LmvMatrimonioVictima,LpsvParejaSentimentalVictima,LcolHermanos,LcolHijos")] Victima victima, HttpPostedFileBase foto)
         {
             if (ModelState.IsValid)
+<<<<<<< HEAD
             {
+=======
+            {  
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
                 if (foto != null)
                 {
                     victima.LstrFotoURL = new byte[foto.ContentLength];
                     foto.InputStream.Read(victima.LstrFotoURL, 0, foto.ContentLength);
                 }
+<<<<<<< HEAD
 
                 db.Entry(victima).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Details/" + victima.LintId);
+=======
+                    
+                db.Entry(victima).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Details/"+victima.LintId);
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             }
             return View(victima);
         }

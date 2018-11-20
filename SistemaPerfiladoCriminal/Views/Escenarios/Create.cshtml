@@ -1,16 +1,25 @@
 ﻿@model SistemaPerfiladoCriminal.Models.Escenario
 
 @{
+<<<<<<< HEAD
     ViewBag.Title = "Create";
 }
 
 <h2>Create</h2>
 
+=======
+    ViewBag.Title = "Crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Crear</h2>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
+<<<<<<< HEAD
     <div class="form-horizontal">
         <h4>Escenario</h4>
         <hr />
@@ -165,4 +174,153 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+=======
+<div class="form-horizontal">
+    <h4>Escenario</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Nombre</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrNombre, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrNombre, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Día del hallazgo</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrDiaHallazgo, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrDiaHallazgo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Fecha del hallazgo</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrFechaHallazgo, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrFechaHallazgo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Hora del hallazgo</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrHoraHallazgo, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrHoraHallazgo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Ubicación</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrUbicacion, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrUbicacion, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Sitio del hallazgo</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrSitioHallazgo, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrSitioHallazgo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Características del sitio</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrCaracteristicasSitio, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrCaracteristicasSitio, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Condiciones del acceso</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrCondionesAcceso, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrCondionesAcceso, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Frecuencia de paso</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrFrecuenciaPaso, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrFrecuenciaPaso, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">La víctima fue encontrada por</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrVictimaEncontradaPor, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrVictimaEncontradaPor, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Posición del cuerpo</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrPosicionCuerpo, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrPosicionCuerpo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Descripción de vestimentas</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrDescripcionVestimentas, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrDescripcionVestimentas, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Pertenencias</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrPertenencias, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrPertenencias, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Fenómenos cadavéricos</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrFenomenosCadavericos, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrFenomenosCadavericos, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Dictamen médico legal</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrDictamenMedicoLegal, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrDictamenMedicoLegal, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Custodia del sitio del suceso</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrCustodiaSitioSuceso, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrCustodiaSitioSuceso, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Hora del levantamiento del cuerpo</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LdtiHoraLevantamientoCuerpo, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LdtiHoraLevantamientoCuerpo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Crear" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
 }

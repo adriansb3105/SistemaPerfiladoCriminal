@@ -21,7 +21,11 @@ namespace SistemaPerfiladoCriminal.Controllers
         {
             return View(db.Autores.ToList());
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,7 +39,11 @@ namespace SistemaPerfiladoCriminal.Controllers
             }
 
             List<DetallesAutor> detalles = db.DetallesAutor.ToList();
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             return View(autor);
         }
 

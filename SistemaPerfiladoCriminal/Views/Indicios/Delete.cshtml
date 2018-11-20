@@ -1,12 +1,22 @@
 ﻿@model SistemaPerfiladoCriminal.Models.Indicio
 
 @{
+<<<<<<< HEAD
     ViewBag.Title = "Delete";
 }
 
 <h2>Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
+=======
+    ViewBag.Title = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Está seguro que desea eliminar este elemento?</h3>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
 <div>
     <h4>Indicio</h4>
     <hr />
@@ -25,8 +35,12 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
+<<<<<<< HEAD
             <input type="submit" value="Delete" class="btn btn-default" /> |
             @Html.ActionLink("Back to List", "Index")
+=======
+            <input type="submit" value="Eliminar" class="btn btn-default" /> 
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
         </div>
     }
 </div>

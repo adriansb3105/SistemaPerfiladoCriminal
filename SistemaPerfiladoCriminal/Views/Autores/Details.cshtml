@@ -1,6 +1,7 @@
 ﻿@model SistemaPerfiladoCriminal.Models.Autor
 
 @{
+<<<<<<< HEAD
     ViewBag.Title = "Details";
 }
 
@@ -24,3 +25,35 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.LintId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+=======
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.LstrNombre</h2>
+
+@Html.ActionLink("Crear detalle", "../DetallesAutores/Create/" + Model.LintId)
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Detalle</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var detalle in Model.LcolDetalles.ToList())
+        {
+            <tr>
+                <td>
+                    @detalle.LstrDetalle
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "../DetallesAutores/Edit", new { id = detalle.LintId }) |
+                    @Html.ActionLink("Eliminar", "../DetallesAutores/Delete", new { id = detalle.LintId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3

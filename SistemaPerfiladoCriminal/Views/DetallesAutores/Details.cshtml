@@ -1,6 +1,7 @@
 ﻿@model SistemaPerfiladoCriminal.Models.DetallesAutor
 
 @{
+<<<<<<< HEAD
     ViewBag.Title = "Details";
 }
 
@@ -12,6 +13,20 @@
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.LstrDetalle)
+=======
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Detalles de autor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label>Detalle</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
         </dt>
 
         <dd>
@@ -21,6 +36,10 @@
     </dl>
 </div>
 <p>
+<<<<<<< HEAD
     @Html.ActionLink("Edit", "Edit", new { id = Model.LintId }) |
     @Html.ActionLink("Back to List", "Index")
+=======
+    @Html.ActionLink("Editar", "Edit", new { id = Model.LintId })
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
 </p>

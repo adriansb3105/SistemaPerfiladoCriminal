@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<SistemaPerfiladoCriminal.Models.Escenario>
 
 @{
+<<<<<<< HEAD
     ViewBag.Title = "Index";
 }
 
@@ -8,6 +9,16 @@
 
 <p>
     @Html.ActionLink("Create New", "Create")
+=======
+    ViewBag.Title = "Escenarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Escenarios</h2>
+
+<p>
+    @Html.ActionLink("Crear escenario", "Create")
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
 </p>
 <table class="table">
     <tr>
@@ -119,9 +130,15 @@
             @Html.DisplayFor(modelItem => item.LdtiHoraLevantamientoCuerpo)
         </td>
         <td>
+<<<<<<< HEAD
             @Html.ActionLink("Edit", "Edit", new { id=item.LintId }) |
             @Html.ActionLink("Details", "Details", new { id=item.LintId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.LintId })
+=======
+            @Html.ActionLink("Editar", "Edit", new { id=item.LintId }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.LintId }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.LintId })
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
         </td>
     </tr>
 }

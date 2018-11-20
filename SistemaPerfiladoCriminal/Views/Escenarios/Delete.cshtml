@@ -1,18 +1,32 @@
 ﻿@model SistemaPerfiladoCriminal.Models.Escenario
 
 @{
+<<<<<<< HEAD
     ViewBag.Title = "Delete";
 }
 
 <h2>Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
+=======
+    ViewBag.Title = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Está seguro que desea eliminar este elemento?</h3>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
 <div>
     <h4>Escenario</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
+<<<<<<< HEAD
             @Html.DisplayNameFor(model => model.LstrNombre)
+=======
+            Nombre
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
         </dt>
 
         <dd>
@@ -20,7 +34,11 @@
         </dd>
 
         <dt>
+<<<<<<< HEAD
             @Html.DisplayNameFor(model => model.LstrDiaHallazgo)
+=======
+            Día del hallazgo
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
         </dt>
 
         <dd>
@@ -28,7 +46,11 @@
         </dd>
 
         <dt>
+<<<<<<< HEAD
             @Html.DisplayNameFor(model => model.LstrFechaHallazgo)
+=======
+            Fecha del hallazgo
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
         </dt>
 
         <dd>
@@ -36,7 +58,11 @@
         </dd>
 
         <dt>
+<<<<<<< HEAD
             @Html.DisplayNameFor(model => model.LstrHoraHallazgo)
+=======
+            Hora del hallazgo
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
         </dt>
 
         <dd>
@@ -44,12 +70,17 @@
         </dd>
 
         <dt>
+<<<<<<< HEAD
             @Html.DisplayNameFor(model => model.LstrUbicacion)
+=======
+            Ubicación
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.LstrUbicacion)
         </dd>
+<<<<<<< HEAD
 
         <dt>
             @Html.DisplayNameFor(model => model.LstrSitioHallazgo)
@@ -147,14 +178,20 @@
             @Html.DisplayFor(model => model.LdtiHoraLevantamientoCuerpo)
         </dd>
 
+=======
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
     </dl>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
+<<<<<<< HEAD
             <input type="submit" value="Delete" class="btn btn-default" /> |
             @Html.ActionLink("Back to List", "Index")
+=======
+            <input type="submit" value="Eliminar" class="btn btn-default" /> 
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
         </div>
     }
 </div>

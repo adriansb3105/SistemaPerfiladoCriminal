@@ -1,6 +1,7 @@
 ﻿@model SistemaPerfiladoCriminal.Models.DetallesAutor
 
 @{
+<<<<<<< HEAD
     ViewBag.Title = "Create";
 }
 
@@ -38,3 +39,37 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+=======
+    ViewBag.Title = "Crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Crear</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Detalles de autor</h4>
+    <hr />
+
+   
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <label class="control-label col-md-2">Detalle</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LstrDetalle, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LstrDetalle, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Crear" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3

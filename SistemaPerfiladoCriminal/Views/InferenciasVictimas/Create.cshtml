@@ -2,21 +2,36 @@
 
 @{
     ViewBag.Title = "Create";
+<<<<<<< HEAD
 }
 
 <h2>Create</h2>
 
+=======
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Crear</h2>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
+<<<<<<< HEAD
         <h4>InferenciaVictima</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.LstrTitulo, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+        <h4>Inferencia de víctima</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label class="control-label col-md-2">Nombre</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrTitulo, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrTitulo, "", new { @class = "text-danger" })
@@ -24,7 +39,11 @@
         </div>
 
         <div class="form-group">
+<<<<<<< HEAD
             @Html.LabelFor(model => model.LstrDescripcion, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Descripción</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrDescripcion, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrDescripcion, "", new { @class = "text-danger" })
@@ -33,6 +52,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
+<<<<<<< HEAD
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
@@ -46,3 +66,10 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+=======
+                <input type="submit" value="Crear" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3

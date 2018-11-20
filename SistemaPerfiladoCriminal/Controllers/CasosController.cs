@@ -59,7 +59,11 @@ namespace SistemaPerfiladoCriminal.Controllers
             {
                 db.Casos.Add(caso);
                 db.SaveChanges();
+<<<<<<< HEAD
                 return RedirectToAction("/Details/" + caso.LintId);
+=======
+                return RedirectToAction("/Details/"+caso.LintId);
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             }
 
             return View(caso);

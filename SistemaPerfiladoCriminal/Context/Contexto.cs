@@ -28,6 +28,10 @@ namespace SistemaPerfiladoCriminal.Context
         public DbSet<Victima> Victimas { get; set; }
 
         public System.Data.Entity.DbSet<SistemaPerfiladoCriminal.Models.InferenciaVictima> InferenciaVictimas { get; set; }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
     }
 }
