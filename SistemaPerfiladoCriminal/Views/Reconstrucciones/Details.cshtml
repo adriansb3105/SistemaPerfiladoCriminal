@@ -1,0 +1,31 @@
+﻿@model SistemaPerfiladoCriminal.Models.Reconstruccion
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.LstrNombre</h2>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Detalle</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var caracteristica in Model.LcolCaracteristicas.ToList())
+        {
+            <tr>
+                <td>
+                    @caracteristica.LstrDetalle
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "../CaracteristicasReconstrucciones/Edit", new { id = caracteristica.LintId }) |
+                    @Html.ActionLink("Eliminar", "../CaracteristicasReconstrucciones/Delete", new { id = caracteristica.LintId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

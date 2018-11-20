@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Perfilado Criminal";
+}
+
+<div class="jumbotron">
+    <h3 class="center">Herramienta policial que permite sistematizar y analizar la información de variables en la investigación criminal de casos complejos con autor desconocido</h3>
+</div>
+<div class="row">
+    <div class="center top-margin">
+        <p>El sistema permite al O.I.J gestionar indicios e identificar patrones en los crímenes seriales y violentos</p>
+    </div>
+
+    <div class="col-md-12 center top-margin">
+        <a>@Html.ActionLink("Iniciar sesión", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-info" })</a>
+        <a>@Html.ActionLink("Registrarse", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-info" })</a>
+    </div>
+</div>

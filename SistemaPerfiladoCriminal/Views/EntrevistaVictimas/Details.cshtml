@@ -1,0 +1,34 @@
+﻿@model SistemaPerfiladoCriminal.Models.EntrevistaVictima
+
+@{
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Entrevista de víctima</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrNombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrDescripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrDescripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.LintId })
+</p>

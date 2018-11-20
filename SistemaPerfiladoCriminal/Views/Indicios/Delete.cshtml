@@ -1,0 +1,33 @@
+﻿@model SistemaPerfiladoCriminal.Models.Indicio
+
+@{
+    ViewBag.Title = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Está seguro que desea eliminar este elemento?</h3>
+<div>
+    <h4>Indicio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrDescripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrDescripcion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" />
+        </div>
+    }
+</div>

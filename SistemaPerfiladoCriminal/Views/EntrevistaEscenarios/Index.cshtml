@@ -1,0 +1,41 @@
+﻿@model IEnumerable<SistemaPerfiladoCriminal.Models.EntrevistaEscenario>
+
+@{
+    ViewBag.Title = "Entrevista de escenario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Entrevista de escenario</h2>
+
+<p>
+    @Html.ActionLink("Crear entrevista", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrNombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LstrDescripcion)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LstrNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LstrDescripcion)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.LintId }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.LintId }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.LintId })
+            </td>
+        </tr>
+    }
+
+</table>
