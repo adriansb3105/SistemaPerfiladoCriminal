@@ -1,12 +1,45 @@
 ﻿@model SistemaPerfiladoCriminal.Models.Reconstruccion
 
 @{
+<<<<<<< HEAD
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+=======
+<<<<<<< HEAD
+    ViewBag.Title = "Details";
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
+}
+
+<h2>@Model.LstrNombre</h2>
+
+<<<<<<< HEAD
+=======
+<div>
+    <h4>Reconstruccion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LstrNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LstrNombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LintId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+=======
     ViewBag.Title = "Detalles";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>@Model.LstrNombre</h2>
 
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
 <table class="table table-hover">
     <thead>
         <tr>
@@ -29,3 +62,7 @@
         }
     </tbody>
 </table>
+<<<<<<< HEAD
+=======
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d

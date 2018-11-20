@@ -1,6 +1,23 @@
 ﻿@model IEnumerable<SistemaPerfiladoCriminal.Models.Indicio>
 
 @{
+<<<<<<< HEAD
+    ViewBag.Title = "Indicios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+=======
+<<<<<<< HEAD
+    ViewBag.Title = "Index";
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
+}
+
+<h2>Indicios</h2>
+
+<p>
+<<<<<<< HEAD
+    @Html.ActionLink("Crear indicio", "Create")
+=======
+    @Html.ActionLink("Create New", "Create")
+=======
     ViewBag.Title = "Indicios";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -9,6 +26,8 @@
 
 <p>
     @Html.ActionLink("Crear indicio", "Create")
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
 </p>
 <table class="table">
     <tr>
@@ -18,6 +37,7 @@
         <th></th>
     </tr>
 
+<<<<<<< HEAD
     @foreach (var item in Model)
     {
         <tr>
@@ -31,5 +51,25 @@
             </td>
         </tr>
     }
+=======
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrDescripcion)
+        </td>
+        <td>
+<<<<<<< HEAD
+            @Html.ActionLink("Edit", "Edit", new { id=item.LintId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LintId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LintId })
+=======
+            @Html.ActionLink("Editar", "Edit", new { id=item.LintId }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.LintId }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.LintId })
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
+        </td>
+    </tr>
+}
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
 
 </table>

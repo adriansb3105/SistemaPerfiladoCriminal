@@ -1,6 +1,61 @@
 ﻿@model SistemaPerfiladoCriminal.Models.Victima
 
 @{
+<<<<<<< HEAD
+    ViewBag.Title = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+=======
+<<<<<<< HEAD
+    ViewBag.Title = "Delete";
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Está seguro que desea eliminar este elemento?</h3>
+<div>
+    <h4>Víctima</h4>
+    <hr />
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-md-2">Foto</label>
+            <div class="col-md-10">
+                <div class="victima-image-div">
+                    @{
+                        if (Model.LstrFotoURL != null)
+                        {
+                            var base64 = Convert.ToBase64String(Model.LstrFotoURL);
+                            var imgsrc = string.Format("data:image/gif;base64,{0}", base64);
+
+                            <img src=@imgsrc class="foto-image rounded-circle img-fluid" alt="">
+                        }
+                        else
+                        {
+                            <img src=~/Content/Img/desconocido.png class="foto-image rounded-circle img-fluid" alt="">
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Nombre</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrNombre)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Alias</label>
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.LstrAlias)
+            </div>
+        </div>
+
+<<<<<<< HEAD
+=======
+    </dl>
+=======
     ViewBag.Title = "Eliminar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -47,6 +102,7 @@
             </div>
         </div>
 
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
         <div class="form-group">
             <label class="control-label col-md-2">Cédula</label>
             <div class="col-md-10">
@@ -54,13 +110,26 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
 
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
+<<<<<<< HEAD
             <input type="submit" value="Eliminar" class="btn btn-default" />
+=======
+<<<<<<< HEAD
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+=======
+            <input type="submit" value="Eliminar" class="btn btn-default" /> 
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
         </div>
     }
 </div>

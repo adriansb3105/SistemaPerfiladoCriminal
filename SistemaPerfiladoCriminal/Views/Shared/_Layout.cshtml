@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+<<<<<<< HEAD
 <html>
 <head>
     <meta charset="utf-8" />
@@ -7,6 +8,15 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+=======
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -19,6 +29,7 @@
                 </button>
                 @Html.ActionLink("Perfilado Criminal", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
+<<<<<<< HEAD
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
@@ -27,11 +38,24 @@
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
+=======
+            <!--<div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+        </ul>
+    </div>-->
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
+<<<<<<< HEAD
         <hr />
+=======
+
+        <hr />
+
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
         <footer>
             Perfilado criminal
             <div class="center">
@@ -42,6 +66,10 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+<<<<<<< HEAD
+=======
+    @Scripts.Render("~/scripts/main.js")
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -1,18 +1,43 @@
 ﻿@model SistemaPerfiladoCriminal.Models.EntrevistaEscenario
 
 @{
+<<<<<<< HEAD
+    ViewBag.Title = "Crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+=======
+<<<<<<< HEAD
+    ViewBag.Title = "Create";
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
+}
+
+<h2>Crear</h2>
+
+<<<<<<< HEAD
+@using (Html.BeginForm())
+=======
+=======
     ViewBag.Title = "Crear";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Crear</h2>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
 
-@using (Html.BeginForm())
+@using (Html.BeginForm()) 
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
+<<<<<<< HEAD
         <h4>Entrevista de escenario</h4>
+=======
+<<<<<<< HEAD
+        <h4>EntrevistaEscenario</h4>
+=======
+        <h4>Entrevista de escenario</h4>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -33,8 +58,32 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
+<<<<<<< HEAD
                 <input type="submit" value="Crear" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
+=======
+<<<<<<< HEAD
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+=======
+                <input type="submit" value="Crear" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d

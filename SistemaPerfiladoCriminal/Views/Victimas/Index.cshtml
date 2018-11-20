@@ -1,6 +1,23 @@
 ﻿@model IEnumerable<SistemaPerfiladoCriminal.Models.Victima>
 
 @{
+<<<<<<< HEAD
+    ViewBag.Title = "Víctimas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+=======
+<<<<<<< HEAD
+    ViewBag.Title = "Index";
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
+}
+
+<h2>Víctimas</h2>
+
+<p>
+<<<<<<< HEAD
+    @Html.ActionLink("Crear víctima", "Create")
+=======
+    @Html.ActionLink("Create New", "Create")
+=======
     ViewBag.Title = "Víctimas";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -9,6 +26,8 @@
 
 <p>
     @Html.ActionLink("Crear víctima", "Create")
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
 </p>
 <table class="table">
     <tr>
@@ -150,6 +169,7 @@
         <th></th>
     </tr>
 
+<<<<<<< HEAD
     @foreach (var item in Model)
     {
         <tr>
@@ -295,5 +315,157 @@
             </td>
         </tr>
     }
+=======
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrFotoURL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrCausa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrAlias)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrSexo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrCedula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LdtiFechaNacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrNacionalidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LintEdad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LdblPeso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LdblEstatura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrTez)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrCabello)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrOjos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrMarcasEspeciales)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrOcupacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrEscolaridad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrCreenciaReligiosa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrHabitos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrPasatiempos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrPadecimientos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrHistorialMedico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrLugarNacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrDireccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrTelefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrEstadoConyugal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrSalidasPais)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrExpedienteCriminal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrPasadaPor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrPrivacionLibertad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrInformacionResenia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrAutopsia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrDictamenToxicologico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrLaboratorio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrFluidosBiologicos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrManeraMuerte)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrCausaMuerte)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrLesionesEncontradasAutopsia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LstrToxicologia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LmvMadreVictima)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LpvPadreVictima)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LmvMatrimonioVictima)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LpsvParejaSentimentalVictima)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LcolHermanos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LcolHijos)
+        </td>
+        <td>
+<<<<<<< HEAD
+            @Html.ActionLink("Edit", "Edit", new { id=item.LintId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LintId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LintId })
+=======
+            @Html.ActionLink("Editar", "Edit", new { id=item.LintId }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.LintId }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.LintId })
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
+        </td>
+    </tr>
+}
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
 
 </table>

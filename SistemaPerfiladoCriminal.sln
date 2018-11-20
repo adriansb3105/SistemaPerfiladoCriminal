@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaPerfiladoCriminal", "SistemaPerfiladoCriminal\SistemaPerfiladoCriminal.csproj", "{A80BB454-C9D4-4715-8B2E-7DD7396D2813}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaPerfiladoCriminal", "SistemaPerfiladoCriminal\SistemaPerfiladoCriminal.csproj", "{F7CA3D92-0CB9-401F-818E-BE84C261C367}"
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +15,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
 		{A80BB454-C9D4-4715-8B2E-7DD7396D2813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A80BB454-C9D4-4715-8B2E-7DD7396D2813}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A80BB454-C9D4-4715-8B2E-7DD7396D2813}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A80BB454-C9D4-4715-8B2E-7DD7396D2813}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{F7CA3D92-0CB9-401F-818E-BE84C261C367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7CA3D92-0CB9-401F-818E-BE84C261C367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7CA3D92-0CB9-401F-818E-BE84C261C367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7CA3D92-0CB9-401F-818E-BE84C261C367}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+<<<<<<< HEAD
 		SolutionGuid = {8C32AB01-78C9-4EC0-8AFF-9A8F79B88C4B}
+=======
+		SolutionGuid = {56C60267-72A1-456F-9768-044615388541}
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
 	EndGlobalSection
 EndGlobal

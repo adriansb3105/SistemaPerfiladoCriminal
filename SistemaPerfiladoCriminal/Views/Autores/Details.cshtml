@@ -1,6 +1,32 @@
 ﻿@model SistemaPerfiladoCriminal.Models.Autor
 
 @{
+<<<<<<< HEAD
+    ViewBag.Title = "Detalles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+=======
+<<<<<<< HEAD
+    ViewBag.Title = "Details";
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
+}
+
+<h2>@Model.LstrNombre</h2>
+
+@Html.ActionLink("Crear detalle", "../DetallesAutores/Create/" + Model.LintId)
+
+<<<<<<< HEAD
+=======
+        <dd>
+            @Html.DisplayFor(model => model.LstrNombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LintId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+=======
     ViewBag.Title = "Detalles";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -9,6 +35,7 @@
 
 @Html.ActionLink("Crear detalle", "../DetallesAutores/Create/" + Model.LintId)
 
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
 <table class="table table-hover">
     <thead>
         <tr>
@@ -31,3 +58,7 @@
         }
     </tbody>
 </table>
+<<<<<<< HEAD
+=======
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d

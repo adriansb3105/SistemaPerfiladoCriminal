@@ -76,7 +76,11 @@ namespace SistemaPerfiladoCriminal.Controllers
                     db.DetallesAutor.Add(detallesAutor);
                     db.SaveChanges();
                 }
+<<<<<<< HEAD
                 return RedirectToAction("../Autores/Details/" + autor.LintId);
+=======
+                return RedirectToAction("../Autores/Details/"+autor.LintId);
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
             }
 
             return View(detallesAutor);

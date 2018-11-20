@@ -1,11 +1,27 @@
 ﻿@model SistemaPerfiladoCriminal.Models.Autor
 
 @{
+<<<<<<< HEAD
     ViewBag.Title = "Editar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Editar</h2>
+=======
+<<<<<<< HEAD
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+=======
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editar</h2>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
 
 @using (Html.BeginForm())
 {
@@ -18,7 +34,15 @@
         @Html.HiddenFor(model => model.LintId)
 
         <div class="form-group">
+<<<<<<< HEAD
             <label class="control-label col-md-2">Nombre</label>
+=======
+<<<<<<< HEAD
+            @Html.LabelFor(model => model.LstrNombre, htmlAttributes: new { @class = "control-label col-md-2" })
+=======
+            <label class="control-label col-md-2">Nombre</label>
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LstrNombre, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LstrNombre, "", new { @class = "text-danger" })
@@ -27,8 +51,32 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
+<<<<<<< HEAD
                 <input type="submit" value="Guardar" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
+=======
+<<<<<<< HEAD
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+=======
+                <input type="submit" value="Guardar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+>>>>>>> 5778c7425840c6f79de49cd3cd2a7f97a9bca9b3
+>>>>>>> 99d5c7cd2acf50cfeb98f9b40b5e7f2f41596d3d
